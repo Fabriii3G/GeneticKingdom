@@ -1,2 +1,4 @@
-﻿  main.cpp
+﻿  GameScreen.cpp
+C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(104,53): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(103,71): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   Genetic_Kingdom.vcxproj -> C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\x64\Debug\Genetic_Kingdom.exe
