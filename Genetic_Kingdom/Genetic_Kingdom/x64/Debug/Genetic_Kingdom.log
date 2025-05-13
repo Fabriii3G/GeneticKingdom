@@ -1,4 +1,4 @@
 ﻿  GameScreen.cpp
-C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(79,17): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(80,17): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(90,25): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(91,25): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
   Genetic_Kingdom.vcxproj -> C:\Users\XPC\OneDrive - Estudiantes ITCR\Escritorio\Proyecto 2\GeneticKingdom\Genetic_Kingdom\x64\Debug\Genetic_Kingdom.exe
