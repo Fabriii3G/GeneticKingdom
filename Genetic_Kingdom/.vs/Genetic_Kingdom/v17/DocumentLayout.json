@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Tower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Tower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Tower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\LowTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:LowTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:LowTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\HighTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HighTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\MidTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:MidTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\HighTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HighTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\MidTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:MidTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -30,8 +70,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 15,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Projectile.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp",
+              "RelativeDocumentMoniker": "Projectile.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp",
+              "RelativeToolTip": "Projectile.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-15T04:08:58.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Projectile.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Projectile.h",
+              "RelativeDocumentMoniker": "Projectile.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Projectile.h",
+              "RelativeToolTip": "Projectile.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T04:08:49.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HighTower.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\HighTower.cpp",
+              "RelativeDocumentMoniker": "HighTower.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\HighTower.cpp",
+              "RelativeToolTip": "HighTower.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-15T02:08:20.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HighTower.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\HighTower.h",
+              "RelativeDocumentMoniker": "HighTower.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\HighTower.h",
+              "RelativeToolTip": "HighTower.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T02:07:42.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MidTower.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\MidTower.cpp",
+              "RelativeDocumentMoniker": "MidTower.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\MidTower.cpp",
+              "RelativeToolTip": "MidTower.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-15T02:06:38.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MidTower.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\MidTower.h",
+              "RelativeDocumentMoniker": "MidTower.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\MidTower.h",
+              "RelativeToolTip": "MidTower.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T02:06:15.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LowTower.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\LowTower.cpp",
+              "RelativeDocumentMoniker": "LowTower.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\LowTower.cpp",
+              "RelativeToolTip": "LowTower.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-15T01:04:38.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LowTower.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h",
+              "RelativeDocumentMoniker": "LowTower.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h",
+              "RelativeToolTip": "LowTower.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T01:04:06.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -49,20 +197,90 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Tower.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp",
+              "RelativeDocumentMoniker": "Tower.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp",
+              "RelativeToolTip": "Tower.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-15T00:07:37.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tower.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Tower.h",
+              "RelativeDocumentMoniker": "Tower.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Tower.h",
+              "RelativeToolTip": "Tower.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T00:06:53.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Grid.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Grid.cpp",
               "RelativeDocumentMoniker": "Grid.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Grid.cpp",
               "RelativeToolTip": "Grid.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-07T04:16:29.257Z"
+              "WhenOpened": "2025-05-07T04:16:29.257Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "GameScreen.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
+              "RelativeDocumentMoniker": "GameScreen.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
+              "RelativeToolTip": "GameScreen.cpp",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAmwCcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-06T20:23:35.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GameScreen.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h",
+              "RelativeDocumentMoniker": "GameScreen.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h",
+              "RelativeToolTip": "GameScreen.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-06T20:23:12.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-06T17:34:59.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Grid.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\Grid.h",
               "RelativeDocumentMoniker": "Grid.h",
@@ -71,43 +289,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-07T04:15:56.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameScreen.cpp",
-              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
-              "RelativeDocumentMoniker": "GameScreen.cpp",
-              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
-              "RelativeToolTip": "GameScreen.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T20:23:35.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameScreen.h",
-              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h",
-              "RelativeDocumentMoniker": "GameScreen.h",
-              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h",
-              "RelativeToolTip": "GameScreen.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T20:23:12.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\Proyecto 2\\GeneticKingdom\\Genetic_Kingdom\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAIAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T17:34:59.367Z"
             }
           ]
         }

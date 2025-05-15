@@ -108,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,11 +135,21 @@
   <ItemGroup>
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HighTower.cpp" />
+    <ClCompile Include="LowTower.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MidTower.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Tower.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="HighTower.h" />
+    <ClInclude Include="LowTower.h" />
+    <ClInclude Include="MidTower.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Tower.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
