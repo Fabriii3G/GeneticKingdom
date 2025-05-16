@@ -37,7 +37,7 @@ void runGame() {
     sf::Clock clock; // Para calcular deltaTime
 
 
-    int credits = 1500;
+    int credits = 15000;
 
     sf::RenderWindow gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Genetic Empire");
 
@@ -155,16 +155,17 @@ void runGame() {
                         }
                         else if (selectedTowerType == MID && credits >= COST_MID) {
                             cost = COST_MID;
-                            newTower = new LowTower();
+                            newTower = new MidTower(); 
                             newTower->setTexture(textureMid, TILE_SIZE);
                             grid[row][col] = MIDTOWER;
                         }
                         else if (selectedTowerType == HIGH && credits >= COST_HIGH) {
                             cost = COST_HIGH;
-                            newTower = new LowTower();
+                            newTower = new HighTower(); 
                             newTower->setTexture(textureHigh, TILE_SIZE);
                             grid[row][col] = HIGHTOWER;
                         }
+
 
                         if (newTower != nullptr) {
                             credits -= cost;
@@ -182,6 +183,40 @@ void runGame() {
 
         gameWindow.clear(sf::Color(55, 55, 55, 127));
         gameWindow.draw(backgroundSprite);
+
+        // Actualizar torres
+        float deltaTime = clock.restart().asSeconds();
+        for (int row = 0; row < ROWS; ++row) {
+            for (int col = 0; col < COLS; ++col) {
+                if (towers[row][col]) {
+                    float x = GRID_OFFSET_X + col * TILE_SIZE;
+                    float y = GRID_OFFSET_Y + row * TILE_SIZE;
+                    towers[row][col]->update(x, y, grid, row, col, projectiles);
+                }
+            }
+        }
+
+        // Actualizar proyectiles
+        for (auto it = projectiles.begin(); it != projectiles.end();) {
+            it->update(deltaTime);
+            if (it->hasReachedTarget()) {
+                int enemyRow = it->getTargetRow();
+                int enemyCol = it->getTargetCol();
+
+                // Solo borra si el enemigo sigue ahí
+                if (grid[enemyRow][enemyCol] == 10) {
+                    grid[enemyRow][enemyCol] = 0;
+                    std::cout << "Enemigo eliminado en (" << enemyRow << ", " << enemyCol << ")\n";
+                }
+
+                it = projectiles.erase(it);
+            }
+            else {
+                ++it;
+            }
+
+        }
+
 
         // Dibujar el grid
         for (int row = 0; row < ROWS; ++row) {
@@ -205,6 +240,12 @@ void runGame() {
                 }
             }
         }
+
+        // Dibujar proyectiles
+        for (const auto& p : projectiles) {
+            p.draw(gameWindow);
+        }
+
 
         // Dibujar botones
         gameWindow.draw(buttonLow);

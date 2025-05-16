@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
+#include "Projectile.h"
 class Tower {
 protected:
     int damage;
@@ -20,7 +20,7 @@ public:
 
     void draw(sf::RenderWindow& window, float x, float y);
     void setTexture(const sf::Texture& texture, float tileSize);
-    virtual void update(float x, float y, int grid[25][25], int row, int col);
+    virtual void update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles);
 
     float getRange() const { return range; }
 };

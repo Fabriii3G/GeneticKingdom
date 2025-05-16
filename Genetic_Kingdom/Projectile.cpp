@@ -1,33 +1,32 @@
+// Projectile.cpp
 #include "Projectile.h"
 #include <cmath>
 
-Projectile::Projectile(sf::Vector2f start, sf::Vector2f targetPos)
-    : position(start), target(targetPos) {
+// Projectile.cpp
+Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int targetRow, int targetCol)
+    : position(startPos), target(targetPos), speed(200.0f), targetRow(targetRow), targetCol(targetCol)
+{
+    sf::Vector2f delta = target - position;
+    float length = std::sqrt(delta.x * delta.x + delta.y * delta.y);
+    direction = delta / length;
 
     shape.setRadius(5);
     shape.setFillColor(sf::Color::Red);
     shape.setOrigin(5, 5);
     shape.setPosition(position);
-
-    sf::Vector2f direction = target - start;
-    float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
-    if (length != 0)
-        velocity = direction / length * speed;
-    else
-        velocity = { 0.f, 0.f };
 }
 
+
 void Projectile::update(float deltaTime) {
-    position += velocity * deltaTime;
+    position += direction * speed * deltaTime;
     shape.setPosition(position);
 }
 
-void Projectile::draw(sf::RenderWindow& window) {
+void Projectile::draw(sf::RenderWindow& window) const {
     window.draw(shape);
 }
 
 bool Projectile::hasReachedTarget() const {
-    float dx = position.x - target.x;
-    float dy = position.y - target.y;
-    return std::sqrt(dx * dx + dy * dy) < 10.f;
+    sf::Vector2f delta = target - position;
+    return std::sqrt(delta.x * delta.x + delta.y * delta.y) < 5.0f;
 }

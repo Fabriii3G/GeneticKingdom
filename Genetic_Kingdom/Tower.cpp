@@ -1,4 +1,16 @@
 #include "Tower.h"
+const int TILE_SIZE = 32;
+const int ROWS = 25;
+const int COLS = 25;
+
+const int WINDOW_WIDTH = 1300;
+const int WINDOW_HEIGHT = 1000;
+
+const int MAP_WIDTH = COLS * TILE_SIZE;   // 800 px
+const int MAP_HEIGHT = ROWS * TILE_SIZE;  // 800 px
+
+const int GRID_OFFSET_X = (WINDOW_WIDTH - MAP_WIDTH) / 2;
+const int GRID_OFFSET_Y = (WINDOW_HEIGHT - MAP_HEIGHT) / 2;
 
 Tower::Tower(int dmg, float spd, float rng, float spCd, float atkCd)
     : damage(dmg), speed(spd), range(rng), specialCooldown(spCd), attackCooldown(atkCd) {
@@ -24,20 +36,25 @@ void Tower::draw(sf::RenderWindow& window, float x, float y) {
     }
 }
 
-void Tower::update(float x, float y, int grid[25][25], int row, int col) {
-    isAttacking = false;
+void Tower::update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles) {
 
-    int r = static_cast<int>(range);
-    for (int dr = -r; dr <= r; ++dr) {
-        for (int dc = -r; dc <= r; ++dc) {
-            int nr = row + dr;
-            int nc = col + dc;
-            if (nr >= 0 && nr < 25 && nc >= 0 && nc < 25) {
-                if (grid[nr][nc] == 10) {
-                    isAttacking = true;
-                    return;
-                }
+    for (int dr = -range; dr <= range; ++dr) {
+        for (int dc = -range; dc <= range; ++dc) {
+            int newRow = row + dr;
+            int newCol = col + dc;
+
+            if (newRow >= 0 && newRow < 25 && newCol >= 0 && newCol < 25 && grid[newRow][newCol] == 10) {
+                float enemyX = GRID_OFFSET_X + newCol * TILE_SIZE + TILE_SIZE / 2;
+                float enemyY = GRID_OFFSET_Y + newRow * TILE_SIZE + TILE_SIZE / 2;
+
+                // Centro de la torre
+                sf::Vector2f start(x + TILE_SIZE / 2, y + TILE_SIZE / 2);
+                sf::Vector2f target(enemyX, enemyY);
+
+                projectiles.emplace_back(start, target, newRow, newCol);
+                return; // Solo dispara una vez por update
             }
         }
     }
 }
+
