@@ -2,23 +2,17 @@
 #include <iostream>
 
 OgreEnemy::OgreEnemy(sf::Vector2i startPos, float hp)
-    : Enemy(startPos, hp, 1.0f, 0.3f, 0.1f, 0.2f) // resistencia ejemplo: flechas, magia, artillería
+    : Enemy(startPos, hp, 1.0f, 0.3f, 0.1f, 0.2f) // resistencias: flechas, magia, artillería
 {
     if (!texture.loadFromFile("ogre.png")) {
         std::cerr << "Error cargando ogre.png\n";
     }
     sprite.setTexture(texture);
-    sprite.setScale(0.5f, 0.5f); // ajusta según tamaño real de sprite
+    sprite.setScale(0.5f, 0.5f); // ajustar según tamaño
 }
 
 void OgreEnemy::move() {
-    Enemy::move(); // lógica de movimiento
-
-    // Actualiza posición del sprite visual según grid
-    sprite.setPosition(
-        static_cast<float>(position.x * 32), // tileSize puede venir por parámetro
-        static_cast<float>(position.y * 32)
-    );
+    Enemy::move(); // lógica de grid
 }
 
 std::string OgreEnemy::getType() const {

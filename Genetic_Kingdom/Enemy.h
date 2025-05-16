@@ -39,6 +39,10 @@ public:
     virtual float getFitness() const; // para el algoritmo genético
     virtual std::string getType() const = 0; // por subclase
 
+    // Método virtual puro para dibujar el enemigo en la ventana
+    virtual void draw(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const = 0;
+	
+
     // Getter/setters si necesitas más acceso
 };
 

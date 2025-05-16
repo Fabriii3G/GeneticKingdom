@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:OgreEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:OgreEnemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,6 +73,61 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyManager.cpp",
+              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp",
+              "RelativeDocumentMoniker": "EnemyManager.cpp",
+              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp",
+              "RelativeToolTip": "EnemyManager.cpp",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAkwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-15T05:37:22.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyManager.h",
+              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h",
+              "RelativeDocumentMoniker": "EnemyManager.h",
+              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h",
+              "RelativeToolTip": "EnemyManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T05:36:54.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Enemy.h",
+              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.h",
+              "RelativeDocumentMoniker": "Enemy.h",
+              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.h",
+              "RelativeToolTip": "Enemy.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-14T18:37:02.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameScreen.cpp",
+              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
+              "RelativeDocumentMoniker": "GameScreen.cpp",
+              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
+              "RelativeToolTip": "GameScreen.cpp",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAADkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-06T20:23:35.343Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "OgreEnemy.cpp",
@@ -80,75 +135,35 @@
               "RelativeDocumentMoniker": "OgreEnemy.cpp",
               "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.cpp",
               "RelativeToolTip": "OgreEnemy.cpp",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-15T05:39:14.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OgreEnemy.h",
-              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.h",
-              "RelativeDocumentMoniker": "OgreEnemy.h",
-              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.h",
-              "RelativeToolTip": "OgreEnemy.h",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-15T05:38:43.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EnemyManager.cpp",
-              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp",
-              "RelativeDocumentMoniker": "EnemyManager.cpp",
-              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp",
-              "RelativeToolTip": "EnemyManager.cpp",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAkwF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-15T05:37:22.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnemyManager.h",
-              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h",
-              "RelativeDocumentMoniker": "EnemyManager.h",
-              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h",
-              "RelativeToolTip": "EnemyManager.h",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-15T05:36:54.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Enemy.h",
-              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.h",
-              "RelativeDocumentMoniker": "Enemy.h",
-              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.h",
-              "RelativeToolTip": "Enemy.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-14T18:37:02.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Enemy.cpp",
               "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.cpp",
               "RelativeDocumentMoniker": "Enemy.cpp",
               "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\Enemy.cpp",
               "RelativeToolTip": "Enemy.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-14T18:36:46.01Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OgreEnemy.h",
+              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.h",
+              "RelativeDocumentMoniker": "OgreEnemy.h",
+              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.h",
+              "RelativeToolTip": "OgreEnemy.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-15T05:38:43.162Z"
             },
             {
               "$type": "Document",
@@ -176,19 +191,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameScreen.cpp",
-              "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
-              "RelativeDocumentMoniker": "GameScreen.cpp",
-              "ToolTip": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
-              "RelativeToolTip": "GameScreen.cpp",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T20:23:35.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
               "Title": "GameScreen.h",
               "DocumentMoniker": "C:\\Users\\alear\\Documents\\GitHub\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h",
@@ -209,8 +211,7 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T17:34:59.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T17:34:59.367Z"
             }
           ]
         }

@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Grid.h"
+#include "EnemyManager.h"
+
 
 const int TILE_SIZE = 32;
 const int ROWS = 25;
@@ -23,8 +25,9 @@ enum TileType {
 void runGame() {
     sf::RenderWindow gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Genetic Empire");
 
+    EnemyManager enemyManager;
     int grid[ROWS][COLS] = { 0 };
-    fillTiles(grid);  // Carga valores iniciales si tienes celdas especiales
+    fillTiles(grid);  // Celdas con obstáculos (valor 2)
 
     // Cargar imagen de fondo
     sf::Texture backgroundTexture;
@@ -50,6 +53,18 @@ void runGame() {
         static_cast<float>(TILE_SIZE) / textureTower.getSize().y
     );
 
+    // Sprite de enemigos se cargan en las subclases 
+
+    // Dummy path temporal 
+    std::vector<sf::Vector2i> path;
+    for (int i = 0; i < 25; ++i) {
+        path.push_back({ i, 0 });
+    }
+
+    // Crear enemigos y asignarles camino
+    enemyManager.spawnInitialEnemies(5);
+    enemyManager.setPathsToAll(path);
+
     // Celda transparente para visualización
     sf::RectangleShape tileShape(sf::Vector2f(TILE_SIZE - 1, TILE_SIZE - 1));
 
@@ -65,7 +80,6 @@ void runGame() {
                 int mouseX = event.mouseButton.x;
                 int mouseY = event.mouseButton.y;
 
-                // Verifica si el clic está dentro del área del mapa
                 if (mouseX >= GRID_OFFSET_X && mouseX < GRID_OFFSET_X + MAP_WIDTH &&
                     mouseY >= GRID_OFFSET_Y && mouseY < GRID_OFFSET_Y + MAP_HEIGHT) {
 
@@ -76,6 +90,28 @@ void runGame() {
                         grid[row][col] = TOWER;
                         std::cout << "Slave1 colocada en: (" << row << ", " << col << ")\n";
                     }
+                }
+            }
+        }
+
+        // Actualizar enemigos
+        enemyManager.updateEnemies();
+
+        // Limpiar enemigos previos del grid
+        for (int row = 0; row < ROWS; ++row) {
+            for (int col = 0; col < COLS; ++col) {
+                if (grid[row][col] == 10) {
+                    grid[row][col] = EMPTY;
+                }
+            }
+        }
+
+        // Actualizar enemigos en el grid
+        for (const auto& enemy : enemyManager.getEnemies()) {
+            if (enemy->isAlive()) {
+                sf::Vector2i pos = enemy->getPosition();
+                if (pos.y >= 0 && pos.y < ROWS && pos.x >= 0 && pos.x < COLS) {
+                    grid[pos.y][pos.x] = 10;
                 }
             }
         }
@@ -99,11 +135,18 @@ void runGame() {
                     Ship.setPosition(x, y);
                     gameWindow.draw(Ship);
                 }
-                else {
+                else if (tile == 10) {
                     tileShape.setPosition(x, y);
-                    tileShape.setFillColor(sf::Color(0, 0, 0, 0));
-                    gameWindow.draw(tileShape);
+                    tileShape.setFillColor(sf::Color::Transparent);
+                    gameWindow.draw(tileShape); // fondo para enemigos si quieres
                 }
+            }
+        }
+
+        // Dibujar enemigos (sprites)
+        for (const auto& enemy : enemyManager.getEnemies()) {
+            if (enemy->isAlive()) {
+                enemy->draw(gameWindow, TILE_SIZE, sf::Vector2f(GRID_OFFSET_X, GRID_OFFSET_Y));
             }
         }
 

@@ -2,6 +2,9 @@
   EnemyManager.cpp
 C:\Users\alear\Documents\GitHub\GeneticKingdom\Genetic_Kingdom\EnemyManager.cpp(44,25): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\alear\Documents\GitHub\GeneticKingdom\Genetic_Kingdom\EnemyManager.cpp(63,18): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  GameScreen.cpp
+C:\Users\alear\Documents\GitHub\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(126,25): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\alear\Documents\GitHub\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(127,25): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
   OgreEnemy.cpp
   Generando código...
   Genetic_Kingdom.vcxproj -> C:\Users\alear\Documents\GitHub\GeneticKingdom\Genetic_Kingdom\x64\Debug\Genetic_Kingdom.exe
