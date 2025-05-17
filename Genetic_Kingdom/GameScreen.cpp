@@ -7,6 +7,7 @@
 #include <memory>
 #include <vector>
 #include "Projectile.h"
+#include "EnemyManager.h"
 
 const int COST_LOW = 100;
 const int COST_MID = 500;
@@ -41,6 +42,7 @@ void runGame() {
 
     sf::RenderWindow gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Genetic Empire");
 
+    EnemyManager enemyManager;
     int grid[ROWS][COLS] = { 0 };
     fillTiles(grid);
 
@@ -105,6 +107,16 @@ void runGame() {
     creditText.setPosition(20, 20);
     creditText.setString("Creditos: " + std::to_string(credits));
 
+    // Dummy path temporal 
+    std::vector<sf::Vector2i> path;
+    for (int i = 0; i < 25; ++i) {
+        path.push_back({ i, 0 });
+    }
+
+    // Crear enemigos y asignarles camino
+    enemyManager.spawnInitialEnemies(5);
+    enemyManager.setPathsToAll(path);
+
 
     // --- Loop principal ---
     while (gameWindow.isOpen()) {
@@ -155,13 +167,13 @@ void runGame() {
                         }
                         else if (selectedTowerType == MID && credits >= COST_MID) {
                             cost = COST_MID;
-                            newTower = new MidTower(); 
+                            newTower = new MidTower();
                             newTower->setTexture(textureMid, TILE_SIZE);
                             grid[row][col] = MIDTOWER;
                         }
                         else if (selectedTowerType == HIGH && credits >= COST_HIGH) {
                             cost = COST_HIGH;
-                            newTower = new HighTower(); 
+                            newTower = new HighTower();
                             newTower->setTexture(textureHigh, TILE_SIZE);
                             grid[row][col] = HIGHTOWER;
                         }
@@ -177,6 +189,27 @@ void runGame() {
                             std::cout << "No tienes suficientes creditos para esta torre.\n";
                         }
                     }
+                }
+            }
+        }
+
+        // Actualizar enemigos
+        //enemyManager.updateEnemies();
+        // Limpiar enemigos previos del grid
+        //for (int row = 0; row < ROWS; ++row) {
+          //  for (int col = 0; col < COLS; ++col) {
+            //    if (grid[row][col] == 10) {
+              //      grid[row][col] = EMPTY;
+                //}
+            //}
+        //}
+
+        // Actualizar enemigos en el grid
+        for (const auto& enemy : enemyManager.getEnemies()) {
+            if (enemy->isAlive()) {
+                sf::Vector2i pos = enemy->getPosition();
+                if (pos.y >= 0 && pos.y < ROWS && pos.x >= 0 && pos.x < COLS) {
+                   // grid[pos.y][pos.x] = 10;
                 }
             }
         }
@@ -204,7 +237,7 @@ void runGame() {
                 int enemyCol = it->getTargetCol();
 
                 // Solo borra si el enemigo sigue ahí
-                if (grid[enemyRow][enemyCol] == 10) {
+                if (grid[enemyRow][enemyCol] == 10 ) {
                     grid[enemyRow][enemyCol] = 0;
                     std::cout << "Enemigo eliminado en (" << enemyRow << ", " << enemyCol << ")\n";
                 }
@@ -230,7 +263,7 @@ void runGame() {
                 else if (grid[row][col] == MIDTOWER && towers[row][col]) {
                     towers[row][col]->draw(gameWindow, x, y);
                 }
-                else if(grid[row][col] == HIGHTOWER && towers[row][col]) {
+                else if (grid[row][col] == HIGHTOWER && towers[row][col]) {
                     towers[row][col]->draw(gameWindow, x, y);
                 }
                 else {
@@ -246,6 +279,14 @@ void runGame() {
             p.draw(gameWindow);
         }
 
+        // Dibujar enemigos (sprites)
+        for (const auto& enemy : enemyManager.getEnemies()) {
+            if (enemy->isAlive()) {
+                 enemy->draw(gameWindow, TILE_SIZE, sf::Vector2f(GRID_OFFSET_X, GRID_OFFSET_Y));
+            }
+        }
+
+
 
         // Dibujar botones
         gameWindow.draw(buttonLow);
@@ -258,4 +299,3 @@ void runGame() {
         gameWindow.display();
     }
 }
-

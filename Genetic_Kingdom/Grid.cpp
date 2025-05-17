@@ -3,6 +3,7 @@
 void fillTiles(int grid[GRID_ROWS][GRID_COLS]) {
 	grid[0][0] = 10;
 	grid[0][24] = 10;
+	grid[4][20] = 10;
 	grid[3][9] = 5;
 	grid[3][8] = 5;
 	grid[4][8] = 5;
