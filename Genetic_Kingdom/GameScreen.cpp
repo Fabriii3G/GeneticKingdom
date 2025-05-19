@@ -196,20 +196,22 @@ void runGame() {
         // Actualizar enemigos
         //enemyManager.updateEnemies();
         // Limpiar enemigos previos del grid
-        //for (int row = 0; row < ROWS; ++row) {
-          //  for (int col = 0; col < COLS; ++col) {
-            //    if (grid[row][col] == 10) {
-              //      grid[row][col] = EMPTY;
-                //}
-            //}
-        //}
+        /*
+        for (int row = 0; row < ROWS; ++row) {
+            for (int col = 0; col < COLS; ++col) {
+                if (grid[row][col] == 10) {
+                    grid[row][col] = EMPTY;
+                }
+            }
+        }
+        */
 
         // Actualizar enemigos en el grid
         for (const auto& enemy : enemyManager.getEnemies()) {
             if (enemy->isAlive()) {
                 sf::Vector2i pos = enemy->getPosition();
                 if (pos.y >= 0 && pos.y < ROWS && pos.x >= 0 && pos.x < COLS) {
-                   // grid[pos.y][pos.x] = 10;
+                    grid[pos.y][pos.x] = 10;
                 }
             }
         }

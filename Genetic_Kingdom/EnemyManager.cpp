@@ -10,11 +10,30 @@ EnemyManager::EnemyManager(float mutationRate)
 
 void EnemyManager::spawnInitialEnemies(int count) {
     enemies.clear();
+    const int COLS = 25;
+    const int ROWS = 25;
+
+    int filaInicio = 24;
+
     for (int i = 0; i < count; ++i) {
-        enemies.push_back(std::make_shared<OgreEnemy>()); // temporal, se irán agregando tipos
+        int columna = i % COLS; // distribuye enemigos por columnas
+
+        // Coloca enemigo en fila 24 y columna incremental
+        sf::Vector2i pos(columna, filaInicio);
+
+        // Crea el enemigo y lo ubica en esa posición
+        enemies.push_back(std::make_shared<OgreEnemy>(pos));
+
+        // Mensaje de debug
+        std::cout << "[DEBUG] Enemigo creado en posición ("
+            << pos.y << ", " << pos.x << ") con vida: "
+            << 100.0f << std::endl;
+        
     }
+
     generation = 0;
 }
+
 
 void EnemyManager::updateEnemies() {
     for (auto& e : enemies) {
