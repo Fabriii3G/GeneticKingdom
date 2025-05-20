@@ -10,7 +10,7 @@ private:
 
 public:
     HarpyEnemy(sf::Vector2i startPos = { 0, 24 }, float hp = 60.0f);
-    void move() override;
+    void move(float deltaTime) override;
     std::string getType() const override;
     void draw(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const override;
 };

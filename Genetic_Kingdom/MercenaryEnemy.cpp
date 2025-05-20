@@ -11,8 +11,8 @@ MercenaryEnemy::MercenaryEnemy(sf::Vector2i startPos, float hp)
     sprite.setScale(0.5f, 0.5f);
 }
 
-void MercenaryEnemy::move() {
-    Enemy::move();
+void MercenaryEnemy::move(float deltaTime) {
+    Enemy::move(deltaTime);
 }
 
 std::string MercenaryEnemy::getType() const {

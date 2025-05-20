@@ -11,8 +11,8 @@ DarkElfEnemy::DarkElfEnemy(sf::Vector2i startPos, float hp)
     sprite.setScale(0.5f, 0.5f);
 }
 
-void DarkElfEnemy::move() {
-    Enemy::move();
+void DarkElfEnemy::move(float deltaTime) {
+    Enemy::move(deltaTime);
 }
 
 std::string DarkElfEnemy::getType() const {

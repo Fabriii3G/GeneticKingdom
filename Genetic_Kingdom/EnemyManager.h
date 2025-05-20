@@ -20,7 +20,7 @@ public:
     void spawnInitialEnemies(int count); // Generación 0
     void evolve(); // Ejecuta selección + cruce + mutación
 
-    void updateEnemies(); // mueve a todos los enemigos
+    void updateEnemies(float deltaTime); // mueve a todos los enemigos
     void applyDamageAt(sf::Vector2i position, DamageType type, float amount); // permite aplicar daño a enemigos
 
     const std::vector<std::shared_ptr<Enemy>>& getEnemies() const;

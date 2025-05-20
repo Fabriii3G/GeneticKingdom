@@ -11,8 +11,8 @@ HarpyEnemy::HarpyEnemy(sf::Vector2i startPos, float hp)
     sprite.setScale(0.5f, 0.5f);
 }
 
-void HarpyEnemy::move() {
-    Enemy::move();
+void HarpyEnemy::move(float deltaTime) {
+    Enemy::move(deltaTime);
 }
 
 std::string HarpyEnemy::getType() const {

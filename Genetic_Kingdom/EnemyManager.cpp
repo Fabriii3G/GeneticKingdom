@@ -38,10 +38,10 @@ void EnemyManager::spawnInitialEnemies(int count) {
 }
 
 
-void EnemyManager::updateEnemies() {
+void EnemyManager::updateEnemies(float deltaTime) {
     for (auto& e : enemies) {
         if (e->isAlive()) {
-            e->move();
+            e->move(deltaTime);
         }
     }
 }

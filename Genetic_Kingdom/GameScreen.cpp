@@ -113,7 +113,7 @@ void runGame() {
     enemyManager.spawnInitialEnemies(5);
     for (auto& enemy : enemyManager.getEnemies()) {
         sf::Vector2i start = enemy->getPosition();
-        sf::Vector2i goal = { 12, 4 };  
+        sf::Vector2i goal = { 12, 5 };  
 
         std::vector<sf::Vector2i> path = findPathAStar(start, goal, grid);
         enemy->setPath(path);
@@ -122,6 +122,8 @@ void runGame() {
 
     // --- Loop principal ---
     while (gameWindow.isOpen()) {
+        float deltaTime = clock.restart().asSeconds(); // Declaración única de deltaTime
+
         sf::Event event;
         while (gameWindow.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
@@ -180,7 +182,6 @@ void runGame() {
                             grid[row][col] = HIGHTOWER;
                         }
 
-
                         if (newTower != nullptr) {
                             credits -= cost;
                             towers[row][col] = newTower;
@@ -196,9 +197,9 @@ void runGame() {
         }
 
         // Actualizar enemigos
-        enemyManager.updateEnemies();
+        enemyManager.updateEnemies(deltaTime);
+
         // Limpiar enemigos previos del grid
-        
         for (int row = 0; row < ROWS; ++row) {
             for (int col = 0; col < COLS; ++col) {
                 if (grid[row][col] == 10) {
@@ -206,7 +207,6 @@ void runGame() {
                 }
             }
         }
-        
 
         // Actualizar enemigos en el grid
         for (const auto& enemy : enemyManager.getEnemies()) {
@@ -224,12 +224,10 @@ void runGame() {
             }
         }
 
-
         gameWindow.clear(sf::Color(55, 55, 55, 127));
         gameWindow.draw(backgroundSprite);
 
         // Actualizar torres
-        float deltaTime = clock.restart().asSeconds();
         for (int row = 0; row < ROWS; ++row) {
             for (int col = 0; col < COLS; ++col) {
                 if (towers[row][col]) {
@@ -248,7 +246,7 @@ void runGame() {
                 int enemyCol = it->getTargetCol();
 
                 // Solo borra si el enemigo sigue ahí
-                if (grid[enemyRow][enemyCol] == 10 ) {
+                if (grid[enemyRow][enemyCol] == 10) {
                     grid[enemyRow][enemyCol] = 0;
                     std::cout << "Enemigo eliminado en (" << enemyRow << ", " << enemyCol << ")\n";
                 }
@@ -258,9 +256,7 @@ void runGame() {
             else {
                 ++it;
             }
-
         }
-
 
         // Dibujar el grid
         for (int row = 0; row < ROWS; ++row) {
@@ -293,11 +289,9 @@ void runGame() {
         // Dibujar enemigos (sprites)
         for (const auto& enemy : enemyManager.getEnemies()) {
             if (enemy->isAlive()) {
-                 enemy->draw(gameWindow, TILE_SIZE, sf::Vector2f(GRID_OFFSET_X, GRID_OFFSET_Y));
+                enemy->draw(gameWindow, TILE_SIZE, sf::Vector2f(GRID_OFFSET_X, GRID_OFFSET_Y));
             }
         }
-
-
 
         // Dibujar botones
         gameWindow.draw(buttonLow);
@@ -309,4 +303,5 @@ void runGame() {
         gameWindow.draw(creditText);
         gameWindow.display();
     }
+
 }

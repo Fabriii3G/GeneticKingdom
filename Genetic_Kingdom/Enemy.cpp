@@ -13,12 +13,22 @@ Enemy::Enemy(sf::Vector2i startPos, float hp, float spd,
     pathIndex(0) {
 }
 
-void Enemy::move() {
-    if (pathIndex < path.size()) {
+void Enemy::move(float deltaTime) {
+    if (pathIndex >= path.size())
+        return;
+
+    timeAccumulator += deltaTime;
+
+    
+    float moveInterval = 1.0f / speed; // tiempo entre celdas
+
+    if (timeAccumulator >= moveInterval) {
         position = path[pathIndex];
         pathIndex++;
+        timeAccumulator = 0.0f;
     }
 }
+
 
 void Enemy::receiveDamage(DamageType type, float amount) {
     float actualDamage = amount;

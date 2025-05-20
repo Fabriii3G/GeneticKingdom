@@ -19,6 +19,8 @@ protected:
     float resistanceArrows;
     float resistanceMagic;
     float resistanceArtillery;
+    float timeAccumulator = 0.0f;  // tiempo acumulado desde el último movimiento
+
 
     std::vector<sf::Vector2i> path; // ruta a seguir
     int pathIndex; // siguiente paso en la ruta
@@ -29,7 +31,7 @@ public:
 
     virtual ~Enemy() = default;
 
-    virtual void move(); // avanza hacia el objetivo
+    virtual void move(float deltaTime); // avanza hacia el objetivo
     virtual void receiveDamage(DamageType type, float amount);
     bool isAlive() const;
 
