@@ -196,9 +196,9 @@ void runGame() {
         }
 
         // Actualizar enemigos
-        //enemyManager.updateEnemies();
+        enemyManager.updateEnemies();
         // Limpiar enemigos previos del grid
-        /*
+        
         for (int row = 0; row < ROWS; ++row) {
             for (int col = 0; col < COLS; ++col) {
                 if (grid[row][col] == 10) {
@@ -206,7 +206,7 @@ void runGame() {
                 }
             }
         }
-        */
+        
 
         // Actualizar enemigos en el grid
         for (const auto& enemy : enemyManager.getEnemies()) {
@@ -217,6 +217,13 @@ void runGame() {
                 }
             }
         }
+
+        for (const auto& enemy : enemyManager.getEnemies()) {
+            if (enemy->isAlive()) {
+                enemy->draw(gameWindow, TILE_SIZE, sf::Vector2f(GRID_OFFSET_X, GRID_OFFSET_Y));
+            }
+        }
+
 
         gameWindow.clear(sf::Color(55, 55, 55, 127));
         gameWindow.draw(backgroundSprite);
