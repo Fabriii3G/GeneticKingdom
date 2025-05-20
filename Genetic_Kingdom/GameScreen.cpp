@@ -8,6 +8,7 @@
 #include <vector>
 #include "Projectile.h"
 #include "EnemyManager.h"
+#include "Pathfinder.h"
 
 const int COST_LOW = 100;
 const int COST_MID = 500;
@@ -107,15 +108,16 @@ void runGame() {
     creditText.setPosition(20, 20);
     creditText.setString("Creditos: " + std::to_string(credits));
 
-    // Dummy path temporal 
-    std::vector<sf::Vector2i> path;
-    for (int i = 0; i < 25; ++i) {
-        path.push_back({ i, 0 });
-    }
 
     // Crear enemigos y asignarles camino
     enemyManager.spawnInitialEnemies(5);
-    enemyManager.setPathsToAll(path);
+    for (auto& enemy : enemyManager.getEnemies()) {
+        sf::Vector2i start = enemy->getPosition();
+        sf::Vector2i goal = { 12, 4 };  
+
+        std::vector<sf::Vector2i> path = findPathAStar(start, goal, grid);
+        enemy->setPath(path);
+    }
 
 
     // --- Loop principal ---

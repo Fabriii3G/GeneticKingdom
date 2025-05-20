@@ -1,8 +1,3 @@
-﻿  DarkElfEnemy.cpp
-  EnemyManager.cpp
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\EnemyManager.cpp(66,25): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\EnemyManager.cpp(85,18): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-  HarpyEnemy.cpp
-  MercenaryEnemy.cpp
-  Generando código...
+﻿  Pathfinder.cpp
+C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\Pathfinder.cpp(32,32): warning C4244: 'return': conversión de 'int' a 'float'; posible pérdida de datos
   Genetic_Kingdom.vcxproj -> C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\x64\Debug\Genetic_Kingdom.exe

@@ -145,6 +145,7 @@
     <ClCompile Include="MercenaryEnemy.cpp" />
     <ClCompile Include="MidTower.cpp" />
     <ClCompile Include="OgreEnemy.cpp" />
+    <ClCompile Include="Pathfinder.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Tower.cpp" />
   </ItemGroup>
@@ -160,6 +161,7 @@
     <ClInclude Include="MercenaryEnemy.h" />
     <ClInclude Include="MidTower.h" />
     <ClInclude Include="OgreEnemy.h" />
+    <ClInclude Include="Pathfinder.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="Tower.h" />
   </ItemGroup>
