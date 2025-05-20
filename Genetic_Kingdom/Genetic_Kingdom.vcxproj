@@ -133,25 +133,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DarkElfEnemy.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HarpyEnemy.cpp" />
     <ClCompile Include="HighTower.cpp" />
     <ClCompile Include="LowTower.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MercenaryEnemy.cpp" />
     <ClCompile Include="MidTower.cpp" />
     <ClCompile Include="OgreEnemy.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Tower.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DarkElfEnemy.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="HarpyEnemy.h" />
     <ClInclude Include="HighTower.h" />
     <ClInclude Include="LowTower.h" />
+    <ClInclude Include="MercenaryEnemy.h" />
     <ClInclude Include="MidTower.h" />
     <ClInclude Include="OgreEnemy.h" />
     <ClInclude Include="Projectile.h" />

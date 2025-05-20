@@ -1,5 +1,8 @@
 #include "EnemyManager.h"
-#include "OgreEnemy.h" // Luego incluirás los demás tipos
+#include "OgreEnemy.h"
+#include "DarkElfEnemy.h"
+#include "HarpyEnemy.h"
+#include "MercenaryEnemy.h"
 #include <algorithm>
 #include <iostream>
 #include <ctime>
@@ -22,7 +25,7 @@ void EnemyManager::spawnInitialEnemies(int count) {
         sf::Vector2i pos(columna, filaInicio);
 
         // Crea el enemigo y lo ubica en esa posición
-        enemies.push_back(std::make_shared<OgreEnemy>(pos));
+        enemies.push_back(std::make_shared<MercenaryEnemy>(pos));
 
         // Mensaje de debug
         std::cout << "[DEBUG] Enemigo creado en posición ("
