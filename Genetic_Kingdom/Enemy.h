@@ -4,12 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
-
-enum class DamageType {
-    Arrows,
-    Magic,
-    Artillery
-};
+#include "Enemy.h"
+#include "DamageType.h"
 
 class Enemy {
 protected:
@@ -20,6 +16,8 @@ protected:
     float resistanceMagic;
     float resistanceArtillery;
     float timeAccumulator = 0.0f;  // tiempo acumulado desde el último movimiento
+    int hitCount = 0; // nuevo atributo
+    bool pathBlocked = false;
 
 
     std::vector<sf::Vector2i> path; // ruta a seguir

@@ -1,4 +1,5 @@
 #include "Tower.h"
+#include "DamageType.h"
 const int TILE_SIZE = 32;
 const int ROWS = 25;
 const int COLS = 25;
@@ -51,7 +52,7 @@ void Tower::update(float x, float y, int grid[25][25], int row, int col, std::ve
                 sf::Vector2f start(x + TILE_SIZE / 2, y + TILE_SIZE / 2);
                 sf::Vector2f target(enemyX, enemyY);
 
-                projectiles.emplace_back(start, target, newRow, newCol);
+                projectiles.emplace_back(start, target, newRow, newCol, damageType, damageAmount);
                 return; // Solo dispara una vez por update
             }
         }

@@ -4,6 +4,8 @@
 class Tower {
 protected:
     int damage;
+    DamageType damageType;
+    float damageAmount;
     float speed;
     float range;
     float specialCooldown;
@@ -23,4 +25,13 @@ public:
     virtual void update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles);
 
     float getRange() const { return range; }
+
+    void setDamage(DamageType type, float amount) {
+        damageType = type;
+        damageAmount = amount;
+    }
+
+    DamageType getDamageType() const { return damageType; }
+    float getDamageAmount() const { return damageAmount; }
+
 };

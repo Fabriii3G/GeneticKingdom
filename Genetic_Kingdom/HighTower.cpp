@@ -1,7 +1,10 @@
 #include "HighTower.h"
 
 HighTower::HighTower()
-    : Tower(25, 1.0f, 1, 5.0f, 1.5f) {}
+    : Tower(25, 1.0f, 1, 5.0f, 1.5f) {
+    damageType = DamageType::Artillery;
+    damageAmount = 1.0f;
+}
 
 void HighTower::update(float x, float y, int grid[25][25], int row, int col) {
     isAttacking = false;

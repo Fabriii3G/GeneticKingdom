@@ -1,7 +1,10 @@
 #include "MidTower.h"
 
 MidTower::MidTower()
-    : Tower(15, 1.0f, 2, 5.0f, 1.5f) {}
+    : Tower(15, 1.0f, 2, 5.0f, 1.5f) {
+    damageType = DamageType::Magic;
+    damageAmount = 1.0f;
+}
 
 void MidTower::update(float x, float y, int grid[25][25], int row, int col) {
     isAttacking = false;

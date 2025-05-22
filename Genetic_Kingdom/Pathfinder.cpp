@@ -33,10 +33,13 @@ float heuristic(const sf::Vector2i& a, const sf::Vector2i& b) {
 }
 
 bool isValid(const sf::Vector2i& pos, const int grid[25][25]) {
-    return pos.x >= 0 && pos.x < 25 &&
-        pos.y >= 0 && pos.y < 25 &&
-        grid[pos.y][pos.x] == 0; // libre
+    if (pos.x < 0 || pos.x >= 25 || pos.y < 0 || pos.y >= 25)
+        return false;
+
+    int cell = grid[pos.y][pos.x];
+    return (cell == 0 || cell == 5 || cell == 10); // 0: libre, 5: castillo, 10: enemigo (opcional)
 }
+
 
 std::vector<sf::Vector2i> reconstructPath(const std::unordered_map<sf::Vector2i, sf::Vector2i>& cameFrom, sf::Vector2i current) {
     std::vector<sf::Vector2i> path;

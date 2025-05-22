@@ -1,10 +1,15 @@
-// Projectile.cpp
 #include "Projectile.h"
 #include <cmath>
 
-// Projectile.cpp
-Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int targetRow, int targetCol)
-    : position(startPos), target(targetPos), speed(200.0f), targetRow(targetRow), targetCol(targetCol)
+Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int targetRow, int targetCol,
+    DamageType type, float damage)
+    : position(startPos),
+    target(targetPos),
+    speed(200.0f),
+    targetRow(targetRow),
+    targetCol(targetCol),
+    damageType(type),
+    damageAmount(damage)
 {
     sf::Vector2f delta = target - position;
     float length = std::sqrt(delta.x * delta.x + delta.y * delta.y);
@@ -14,8 +19,19 @@ Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int target
     shape.setFillColor(sf::Color::Red);
     shape.setOrigin(5, 5);
     shape.setPosition(position);
-}
 
+    switch (damageType) {
+    case DamageType::Arrows:
+        shape.setFillColor(sf::Color::Green);
+        break;
+    case DamageType::Magic:
+        shape.setFillColor(sf::Color::Blue);
+        break;
+    case DamageType::Artillery:
+        shape.setFillColor(sf::Color::Red);
+        break;
+    }
+}
 
 void Projectile::update(float deltaTime) {
     position += direction * speed * deltaTime;

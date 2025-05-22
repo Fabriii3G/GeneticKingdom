@@ -1,6 +1,10 @@
 #include "LowTower.h"
 
-LowTower::LowTower() : Tower(10, 1.0f, 4, 5.0f, 1.5f) {}
+LowTower::LowTower() 
+    : Tower(10, 1.0f, 4, 5.0f, 1.5f) {
+    damageType = DamageType::Arrows;
+    damageAmount = 1.0f;
+}
 
 void LowTower::update(float x, float y, int grid[25][25], int row, int col) {
     isAttacking = false;

@@ -27,6 +27,8 @@ const int MAP_HEIGHT = ROWS * TILE_SIZE;  // 800 px
 const int GRID_OFFSET_X = (WINDOW_WIDTH - MAP_WIDTH) / 2;
 const int GRID_OFFSET_Y = (WINDOW_HEIGHT - MAP_HEIGHT) / 2;
 
+
+
 enum TileType {
     EMPTY = 0,
     LOWTOWER = 1,
@@ -38,8 +40,8 @@ void runGame() {
     std::vector<Projectile> projectiles;
     sf::Clock clock; // Para calcular deltaTime
 
-
     int credits = 15000;
+    
 
     sf::RenderWindow gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Genetic Empire");
 
@@ -187,6 +189,24 @@ void runGame() {
                             towers[row][col] = newTower;
                             creditText.setString("Creditos: " + std::to_string(credits));
                             std::cout << "Torre colocada en: (" << row << ", " << col << "), Coste: " << cost << ", Creditos restantes: " << credits << "\n";
+                           
+                            // Recalcular caminos de todos los enemigos despues de colocar una torre
+                            for (auto& enemy : enemyManager.getEnemies()) {
+                                if (enemy->isAlive()) {
+                                    sf::Vector2i current = enemy->getPosition();
+                                    sf::Vector2i goal = { 12, 5 };
+
+                                    std::vector<sf::Vector2i> newPath = findPathAStar(current, goal, grid);
+
+                                    if (!newPath.empty()) {
+                                        enemy->setPath(newPath);
+                                    }
+                                    else {
+                                        std::cout << "[ADVERTENCIA] Enemigo en (" << current.y << ", " << current.x << ") no tiene camino disponible\n";
+                                    }
+                                }
+                            }
+
                         }
                         else {
                             std::cout << "No tienes suficientes creditos para esta torre.\n";
@@ -204,6 +224,7 @@ void runGame() {
             for (int col = 0; col < COLS; ++col) {
                 if (grid[row][col] == 10) {
                     grid[row][col] = EMPTY;
+
                 }
             }
         }
@@ -213,10 +234,14 @@ void runGame() {
             if (enemy->isAlive()) {
                 sf::Vector2i pos = enemy->getPosition();
                 if (pos.y >= 0 && pos.y < ROWS && pos.x >= 0 && pos.x < COLS) {
-                    grid[pos.y][pos.x] = 10;
+                    int cell = grid[pos.y][pos.x];
+                    if (cell == 0 || cell == 5 || cell == 10) { // NO sobrescribe torres
+                        grid[pos.y][pos.x] = 10;
+                    }
                 }
             }
         }
+
 
         for (const auto& enemy : enemyManager.getEnemies()) {
             if (enemy->isAlive()) {
@@ -238,17 +263,23 @@ void runGame() {
             }
         }
 
-        // Actualizar proyectiles
         for (auto it = projectiles.begin(); it != projectiles.end();) {
             it->update(deltaTime);
             if (it->hasReachedTarget()) {
                 int enemyRow = it->getTargetRow();
                 int enemyCol = it->getTargetCol();
 
-                // Solo borra si el enemigo sigue ahí
+                sf::Vector2i targetPos(enemyCol, enemyRow);
+
+                // Aplica daño al enemigo en esa posición
+                enemyManager.applyDamageAt(targetPos, it->getDamageType(), it->getDamageAmount());
+
+                // Solo borra de la grilla si el enemigo sigue ahí (opcional)
                 if (grid[enemyRow][enemyCol] == 10) {
                     grid[enemyRow][enemyCol] = 0;
-                    std::cout << "Enemigo eliminado en (" << enemyRow << ", " << enemyCol << ")\n";
+					//credits += 50; // Recompensa por eliminar enemigo
+                    std::cout << "Enemigo golpeado en (" << enemyRow << ", " << enemyCol << ")\n";
+					std::cout << "Creditos: " << credits << "\n";
                 }
 
                 it = projectiles.erase(it);
@@ -257,6 +288,8 @@ void runGame() {
                 ++it;
             }
         }
+
+
 
         // Dibujar el grid
         for (int row = 0; row < ROWS; ++row) {

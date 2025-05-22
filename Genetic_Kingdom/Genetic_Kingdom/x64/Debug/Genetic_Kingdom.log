@@ -1,42 +1,4 @@
-﻿  EnemyManager.cpp
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\EnemyManager.cpp(66,25): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\EnemyManager.cpp(85,18): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-  GameScreen.cpp
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,66): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,66): warning C4244:         with
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,66): warning C4244:         [
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,66): warning C4244:             T=float
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,66): warning C4244:         ]
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,58): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,58): warning C4244:         with
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,58): warning C4244:         [
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,58): warning C4244:             T=float
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(139,58): warning C4244:         ]
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,66): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,66): warning C4244:         with
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,66): warning C4244:         [
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,66): warning C4244:             T=float
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,66): warning C4244:         ]
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,58): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,58): warning C4244:         with
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,58): warning C4244:         [
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,58): warning C4244:             T=float
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(144,58): warning C4244:         ]
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,67): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,67): warning C4244:         with
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,67): warning C4244:         [
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,67): warning C4244:             T=float
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,67): warning C4244:         ]
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,59): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,59): warning C4244:         with
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,59): warning C4244:         [
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,59): warning C4244:             T=float
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(149,59): warning C4244:         ]
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(234,29): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(235,29): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(264,25): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\GameScreen.cpp(265,25): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-  HarpyEnemy.cpp
-  OgreEnemy.cpp
+﻿  Enemy.cpp
+  main.cpp
   Generando código...
   Genetic_Kingdom.vcxproj -> C:\Users\alear\source\repos\GeneticKingdom\Genetic_Kingdom\x64\Debug\Genetic_Kingdom.exe

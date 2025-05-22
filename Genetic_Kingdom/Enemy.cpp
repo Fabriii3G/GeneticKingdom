@@ -1,6 +1,7 @@
 #include "Enemy.h"
 #include <iostream>
 #include <cmath>
+//#include "GameScreen.h"
 
 Enemy::Enemy(sf::Vector2i startPos, float hp, float spd,
     float resArrow, float resMagic, float resArtillery)
@@ -14,7 +15,7 @@ Enemy::Enemy(sf::Vector2i startPos, float hp, float spd,
 }
 
 void Enemy::move(float deltaTime) {
-    if (pathIndex >= path.size())
+    if (pathBlocked || pathIndex >= path.size())
         return;
 
     timeAccumulator += deltaTime;
@@ -32,6 +33,7 @@ void Enemy::move(float deltaTime) {
 
 void Enemy::receiveDamage(DamageType type, float amount) {
     float actualDamage = amount;
+
     switch (type) {
     case DamageType::Arrows:
         actualDamage *= (1.0f - resistanceArrows);
@@ -45,8 +47,17 @@ void Enemy::receiveDamage(DamageType type, float amount) {
     }
 
     health -= actualDamage;
-    std::cout << getType() << " recibió " << actualDamage << " de daño. Vida restante: " << health << "\n";
+
+    std::cout << getType() << " recibió " << actualDamage
+        << " de daño. Vida restante: " << health << "\n";
+
+    if (health <= 0.0f) {
+        std::cout << getType() << " ha muerto.\n";
+		//credits += 50; // Recompensa por eliminar enemigo
+    }
 }
+
+
 
 bool Enemy::isAlive() const {
     return health > 0;
@@ -57,8 +68,15 @@ sf::Vector2i Enemy::getPosition() const {
 }
 
 void Enemy::setPath(const std::vector<sf::Vector2i>& newPath) {
-    path = newPath;
-    pathIndex = 0;
+    if (newPath.empty()) {
+        pathBlocked = true;
+        std::cout << getType() << " quedó bloqueado sin ruta al castillo.\n";
+    }
+    else {
+        path = newPath;
+        pathIndex = 0;
+        pathBlocked = false;
+    }
 }
 
 float Enemy::getFitness() const {

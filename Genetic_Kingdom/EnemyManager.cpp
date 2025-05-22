@@ -25,7 +25,7 @@ void EnemyManager::spawnInitialEnemies(int count) {
         sf::Vector2i pos(columna, filaInicio);
 
         // Crea el enemigo y lo ubica en esa posición
-        enemies.push_back(std::make_shared<MercenaryEnemy>(pos));
+        enemies.push_back(std::make_shared<HarpyEnemy>(pos));
 
         // Mensaje de debug
         std::cout << "[DEBUG] Enemigo creado en posición ("
@@ -44,7 +44,14 @@ void EnemyManager::updateEnemies(float deltaTime) {
             e->move(deltaTime);
         }
     }
+
+    //  Eliminar enemigos muertos
+    enemies.erase(std::remove_if(enemies.begin(), enemies.end(),
+        [](const std::shared_ptr<Enemy>& e) {
+            return !e->isAlive();
+        }), enemies.end());
 }
+
 
 void EnemyManager::applyDamageAt(sf::Vector2i position, DamageType type, float amount) {
     for (auto& e : enemies) {
