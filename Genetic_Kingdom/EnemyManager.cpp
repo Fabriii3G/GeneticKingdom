@@ -148,9 +148,14 @@ std::shared_ptr<Enemy> EnemyManager::crossover(const Enemy& parent1, const Enemy
 void EnemyManager::mutate(std::shared_ptr<Enemy>& enemy) {
     std::uniform_real_distribution<float> dist(0.0f, 1.0f);
     if (dist(rng) < mutationRate) {
-        // Ejemplo: aumenta vida un poco
-        std::cout << "Mutación ocurrida\n";
-        // Aquí podrías implementar métodos como `enemy->mutateHealth(+10)`
+        auto names = evoManager.getAvailableNames();
+        std::uniform_int_distribution<int> idxDist(0, names.size() - 1);
+
+        const std::string& selectedName = names[idxDist(rng)];
+        const EnemyEvolution& evo = evoManager.getEvolution(selectedName);
+
+        enemy->addEvolution(evo);
+        std::cout << "[MUTACION] Se aplicó evolución: " << selectedName << "\n";
     }
 }
 

@@ -135,7 +135,9 @@
   <ItemGroup>
     <ClCompile Include="DarkElfEnemy.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyEvolution.cpp" />
     <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="EvolutionManager.cpp" />
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="HarpyEnemy.cpp" />
@@ -153,7 +155,9 @@
     <ClInclude Include="DamageType.h" />
     <ClInclude Include="DarkElfEnemy.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyEvolution.h" />
     <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="EvolutionManager.h" />
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="HarpyEnemy.h" />

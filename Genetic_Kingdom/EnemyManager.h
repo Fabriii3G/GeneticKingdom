@@ -5,6 +5,7 @@
 #include <memory>
 #include <random>
 #include "Enemy.h"
+#include "EvolutionManager.h"
 
 class EnemyManager {
 private:
@@ -13,6 +14,8 @@ private:
     float mutationRate;
     int enemiesPerWave = 4;
     std::mt19937 rng;
+
+    EvolutionManager evoManager;
 
     bool waitingForNextWave = false;
     float waveCooldown = 5.0f;

@@ -6,6 +6,7 @@
 #include <string>
 #include "Enemy.h"
 #include "DamageType.h"
+#include "EnemyEvolution.h"
 
 class Enemy {
 protected:
@@ -19,6 +20,7 @@ protected:
     int hitCount = 0; // nuevo atributo
     bool pathBlocked = false;
 
+    std::vector<EnemyEvolution> evolutions;
 
     std::vector<sf::Vector2i> path; // ruta a seguir
     int pathIndex; // siguiente paso en la ruta
@@ -43,6 +45,10 @@ public:
     virtual float getResistanceArrows() const;
     virtual float getResistanceMagic() const;
     virtual float getResistanceArtillery() const;
+
+    void addEvolution(const EnemyEvolution& evo);
+    void drawEvolutions(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const;
+
 
     // Método virtual puro para dibujar el enemigo en la ventana
     virtual void draw(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const = 0;

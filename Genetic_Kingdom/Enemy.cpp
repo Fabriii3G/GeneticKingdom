@@ -103,3 +103,19 @@ float Enemy::getResistanceMagic() const{
 float Enemy::getResistanceArtillery() const{
 	return resistanceArtillery;
 }
+
+void Enemy::addEvolution(const EnemyEvolution& evo) {
+    // Aplica la evolución a los stats
+    evo.applyTo(health, speed, resistanceArrows, resistanceMagic, resistanceArtillery);
+    evolutions.push_back(evo);
+}
+
+void Enemy::drawEvolutions(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const {
+    for (const auto& evo : evolutions) {
+        sf::Sprite overlay = evo.getOverlaySprite();
+        overlay.setScale(static_cast<float>(tileSize) / overlay.getTexture()->getSize().x,
+            static_cast<float>(tileSize) / overlay.getTexture()->getSize().y);
+        overlay.setPosition(offset.x + position.x * tileSize, offset.y + position.y * tileSize);
+        window.draw(overlay);
+    }
+}
