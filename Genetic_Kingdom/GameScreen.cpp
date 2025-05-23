@@ -28,7 +28,6 @@ const int GRID_OFFSET_X = (WINDOW_WIDTH - MAP_WIDTH) / 2;
 const int GRID_OFFSET_Y = (WINDOW_HEIGHT - MAP_HEIGHT) / 2;
 
 
-
 enum TileType {
     EMPTY = 0,
     LOWTOWER = 1,
@@ -112,7 +111,7 @@ void runGame() {
 
 
     // Crear enemigos y asignarles camino
-    enemyManager.spawnInitialEnemies(5);
+    enemyManager.spawnInitialEnemies(4);
     for (auto& enemy : enemyManager.getEnemies()) {
         sf::Vector2i start = enemy->getPosition();
         sf::Vector2i goal = { 12, 5 };  
@@ -218,6 +217,19 @@ void runGame() {
 
         // Actualizar enemigos
         enemyManager.updateEnemies(deltaTime);
+
+        if (enemyManager.isWaveReady(deltaTime)) {
+            int cantidad = enemyManager.getEnemiesPerWave();
+            std::cout << "[INFO] Nueva oleada con " << cantidad << " enemigos\n";
+            enemyManager.spawnInitialEnemies(cantidad);
+
+            for (auto& enemy : enemyManager.getEnemies()) {
+                sf::Vector2i start = enemy->getPosition();
+                sf::Vector2i goal = { 12, 5 };
+                std::vector<sf::Vector2i> path = findPathAStar(start, goal, grid);
+                enemy->setPath(path);
+            }
+        }
 
         // Limpiar enemigos previos del grid
         for (int row = 0; row < ROWS; ++row) {

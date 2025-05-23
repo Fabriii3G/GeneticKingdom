@@ -14,28 +14,23 @@ EnemyManager::EnemyManager(float mutationRate)
 void EnemyManager::spawnInitialEnemies(int count) {
     enemies.clear();
     const int COLS = 25;
-    const int ROWS = 25;
-
-    int filaInicio = 24;
+    const int filaInicio = 24;
 
     for (int i = 0; i < count; ++i) {
-        int columna = i % COLS; // distribuye enemigos por columnas
-
-        // Coloca enemigo en fila 24 y columna incremental
+        int columna = i % 25;
         sf::Vector2i pos(columna, filaInicio);
 
-        // Crea el enemigo y lo ubica en esa posición
-        enemies.push_back(std::make_shared<HarpyEnemy>(pos));
-
-        // Mensaje de debug
-        std::cout << "[DEBUG] Enemigo creado en posición ("
-            << pos.y << ", " << pos.x << ") con vida: "
-            << 100.0f << std::endl;
-        
+        switch (i % 4) {
+        case 0: enemies.push_back(std::make_shared<OgreEnemy>(pos)); break;
+        case 1: enemies.push_back(std::make_shared<HarpyEnemy>(pos)); break;
+        case 2: enemies.push_back(std::make_shared<DarkElfEnemy>(pos)); break;
+        case 3: enemies.push_back(std::make_shared<MercenaryEnemy>(pos)); break;
+        }
     }
 
-    generation = 0;
+    generation++;
 }
+
 
 
 void EnemyManager::updateEnemies(float deltaTime) {
@@ -63,6 +58,35 @@ void EnemyManager::applyDamageAt(sf::Vector2i position, DamageType type, float a
 
 const std::vector<std::shared_ptr<Enemy>>& EnemyManager::getEnemies() const {
     return enemies;
+}
+
+
+bool EnemyManager::isWaveReady(float deltaTime) {
+    if (!waitingForNextWave) {
+        if (enemies.empty()) {
+            waitingForNextWave = true;
+            cooldownTimer = 0.0f;
+        }
+        return false;
+    }
+
+    cooldownTimer += deltaTime;
+    if (cooldownTimer >= waveCooldown) {
+        waitingForNextWave = false;
+        cooldownTimer = 0.0f;
+        enemiesPerWave *= 2; 
+        return true;
+    }
+
+    return false;
+}
+
+int EnemyManager::getEnemiesPerWave() const {
+    return enemiesPerWave;
+}
+
+float EnemyManager::getCooldownProgress() const {
+    return cooldownTimer / waveCooldown;
 }
 
 int EnemyManager::getGeneration() const {
@@ -106,11 +130,20 @@ void EnemyManager::evolve() {
 }
 
 std::shared_ptr<Enemy> EnemyManager::crossover(const Enemy& parent1, const Enemy& parent2) {
-    // Por ahora retorna un nuevo ogro promedio (personalizar según atributos)
-    sf::Vector2i start = { 0, 0 };
+    sf::Vector2i start = { rand() % 25, 24 }; // posición random en fila 24
+
+    // Promediar atributos
     float hp = (parent1.getFitness() + parent2.getFitness()) / 2.0f + 100.0f;
+    float speed = (parent1.getSpeed() + parent2.getSpeed()) / 2.0f;
+    float rArrow = (parent1.getResistanceArrows() + parent2.getResistanceArrows()) / 2.0f;
+    float rMagic = (parent1.getResistanceMagic() + parent2.getResistanceMagic()) / 2.0f;
+    float rArtillery = (parent1.getResistanceArtillery() + parent2.getResistanceArtillery()) / 2.0f;
+
     return std::make_shared<OgreEnemy>(start, hp);
+
 }
+
+
 
 void EnemyManager::mutate(std::shared_ptr<Enemy>& enemy) {
     std::uniform_real_distribution<float> dist(0.0f, 1.0f);

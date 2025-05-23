@@ -83,3 +83,23 @@ float Enemy::getFitness() const {
     // Por defecto, fitness podría ser cuántas celdas recorrió
     return static_cast<float>(pathIndex);
 }
+
+float Enemy::getHealth() const{
+	return health;
+}
+
+float Enemy::getSpeed() const{
+	return speed;
+}
+
+float Enemy::getResistanceArrows() const{
+	return resistanceArrows;
+}
+
+float Enemy::getResistanceMagic() const{
+	return resistanceMagic;
+}
+
+float Enemy::getResistanceArtillery() const{
+	return resistanceArtillery;
+}
