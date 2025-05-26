@@ -39,8 +39,8 @@ void runGame() {
     std::vector<Projectile> projectiles;
     sf::Clock clock; // Para calcular deltaTime
 
-    int credits = 15000;
-    
+    int credits = 1000;
+
 
     sf::RenderWindow gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Genetic Empire");
 
@@ -114,7 +114,7 @@ void runGame() {
     enemyManager.spawnInitialEnemies(4);
     for (auto& enemy : enemyManager.getEnemies()) {
         sf::Vector2i start = enemy->getPosition();
-        sf::Vector2i goal = { 12, 5 };  
+        sf::Vector2i goal = { 18, 5 };  
 
         std::vector<sf::Vector2i> path = findPathAStar(start, goal, grid);
         enemy->setPath(path);
@@ -188,12 +188,12 @@ void runGame() {
                             towers[row][col] = newTower;
                             creditText.setString("Creditos: " + std::to_string(credits));
                             std::cout << "Torre colocada en: (" << row << ", " << col << "), Coste: " << cost << ", Creditos restantes: " << credits << "\n";
-                           
+
                             // Recalcular caminos de todos los enemigos despues de colocar una torre
                             for (auto& enemy : enemyManager.getEnemies()) {
                                 if (enemy->isAlive()) {
                                     sf::Vector2i current = enemy->getPosition();
-                                    sf::Vector2i goal = { 12, 5 };
+                                    sf::Vector2i goal = { 18, 5 };
 
                                     std::vector<sf::Vector2i> newPath = findPathAStar(current, goal, grid);
 
@@ -216,7 +216,8 @@ void runGame() {
         }
 
         // Actualizar enemigos
-        enemyManager.updateEnemies(deltaTime);
+        enemyManager.updateEnemies(deltaTime, credits);
+        creditText.setString("Creditos: " + std::to_string(credits));
 
         if (enemyManager.isWaveReady(deltaTime)) {
             int cantidad = enemyManager.getEnemiesPerWave();
@@ -225,7 +226,7 @@ void runGame() {
 
             for (auto& enemy : enemyManager.getEnemies()) {
                 sf::Vector2i start = enemy->getPosition();
-                sf::Vector2i goal = { 12, 5 };
+                sf::Vector2i goal = { 18, 5 };
                 std::vector<sf::Vector2i> path = findPathAStar(start, goal, grid);
                 enemy->setPath(path);
             }
@@ -241,7 +242,7 @@ void runGame() {
             }
         }
 
-        // Actualizar enemigos en el grid
+        //Actualizar enemigos en el grid
         for (const auto& enemy : enemyManager.getEnemies()) {
             if (enemy->isAlive()) {
                 sf::Vector2i pos = enemy->getPosition();

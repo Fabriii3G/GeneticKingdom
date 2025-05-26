@@ -54,6 +54,8 @@ public:
     virtual void draw(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const = 0;
 
 
+
+
 };
 
 #endif

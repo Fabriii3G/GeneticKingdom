@@ -33,10 +33,27 @@ void EnemyManager::spawnInitialEnemies(int count) {
 
 
 
-void EnemyManager::updateEnemies(float deltaTime) {
+void EnemyManager::updateEnemies(float deltaTime, int& credits) {
     for (auto& e : enemies) {
         if (e->isAlive()) {
             e->move(deltaTime);
+        }
+        else {
+            std::string type = e->getType();
+            if (type == "Ogro") {
+                credits += 75;
+            }
+            else if (type == "Harpia") {
+                credits += 100;
+            }
+            else if (type == "Elfo Oscuro") {
+                credits += 125;
+            }
+            else {
+                credits += 150;
+            }
+            
+            
         }
     }
 

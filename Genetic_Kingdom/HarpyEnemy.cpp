@@ -16,7 +16,7 @@ void HarpyEnemy::move(float deltaTime) {
 }
 
 std::string HarpyEnemy::getType() const {
-    return "Harpía";
+    return "Harpia";
 }
 
 void HarpyEnemy::draw(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const {

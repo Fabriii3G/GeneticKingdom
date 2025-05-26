@@ -11,6 +11,8 @@ OgreEnemy::OgreEnemy(sf::Vector2i startPos, float hp)
     //sprite.setScale(0.5f, 0.5f); // ajustar según tamaño
 }
 
+
+
 void OgreEnemy::move(float deltaTime) {
     Enemy::move(deltaTime); // lógica de grid
 }
