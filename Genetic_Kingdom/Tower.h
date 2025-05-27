@@ -34,4 +34,7 @@ public:
     DamageType getDamageType() const { return damageType; }
     float getDamageAmount() const { return damageAmount; }
 
+    virtual void upgrade() = 0; // método puro virtual en clase base
+
+
 };

@@ -1,3 +1,4 @@
+
 #include "Tower.h"
 #include "DamageType.h"
 const int TILE_SIZE = 32;
@@ -58,4 +59,3 @@ void Tower::update(float x, float y, int grid[25][25], int row, int col, std::ve
         }
     }
 }
-

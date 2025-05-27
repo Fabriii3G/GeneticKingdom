@@ -1,4 +1,5 @@
 #include "MidTower.h"
+#include <iostream>
 
 MidTower::MidTower()
     : Tower(15, 1.0f, 2, 5.0f, 1.5f) {
@@ -22,5 +23,14 @@ void MidTower::update(float x, float y, int grid[25][25], int row, int col) {
                 }
             }
         }
+    }
+}
+
+void MidTower::upgrade() {
+    if (upgradeCounter < 3) {
+        damage += 2;
+        range += 1;
+        upgradeCounter += 1;
+        std::cout << "MidTower mejorada: dano=" << damage << ", rango=" << range << " mejoras realizadas: " << upgradeCounter << "\n";
     }
 }

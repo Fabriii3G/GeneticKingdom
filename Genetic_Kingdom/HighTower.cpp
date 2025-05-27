@@ -1,5 +1,5 @@
 #include "HighTower.h"
-
+#include <iostream>
 HighTower::HighTower()
     : Tower(25, 1.0f, 1, 5.0f, 1.5f) {
     damageType = DamageType::Artillery;
@@ -22,5 +22,14 @@ void HighTower::update(float x, float y, int grid[25][25], int row, int col) {
                 }
             }
         }
+    }
+}
+
+void HighTower::upgrade() {
+    if (upgradeCounter < 3) {
+        damage += 2;
+        range += 1;
+        upgradeCounter += 1;
+        std::cout << "HighTower mejorada: dano=" << damage << ", rango=" << range << " mejoras realizadas: " << upgradeCounter << "\n";
     }
 }

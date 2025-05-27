@@ -1,6 +1,6 @@
 #include "LowTower.h"
-
-LowTower::LowTower() 
+#include <iostream>
+LowTower::LowTower()
     : Tower(10, 1.0f, 4, 5.0f, 1.5f) {
     damageType = DamageType::Arrows;
     damageAmount = 1.0f;
@@ -22,5 +22,14 @@ void LowTower::update(float x, float y, int grid[25][25], int row, int col) {
                 }
             }
         }
+    }
+}
+
+void LowTower::upgrade() {
+    if (upgradeCounter < 3) {
+        damage += 2;
+        range += 1;
+        upgradeCounter += 1;
+        std::cout << "LowTower mejorada: dano=" << damage << ", rango=" << range << " mejoras realizadas: " << upgradeCounter << "\n";
     }
 }

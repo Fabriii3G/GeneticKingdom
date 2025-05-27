@@ -39,8 +39,8 @@ void runGame() {
     std::vector<Projectile> projectiles;
     sf::Clock clock; // Para calcular deltaTime
 
-    int credits = 1000;
-
+    int credits = 100000;
+    int NumWaves = 1;
 
     sf::RenderWindow gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Genetic Empire");
 
@@ -77,25 +77,34 @@ void runGame() {
     buttonLow.setPosition(100, buttonY);
     buttonLow.setFillColor(sf::Color::White);
 
-    sf::RectangleShape buttonMid(sf::Vector2f(buttonWidth, buttonHeight));
+    sf::RectangleShape buttonMid(sf::Vector2f(buttonWidth + 30, buttonHeight));
     buttonMid.setPosition(400, buttonY);
     buttonMid.setFillColor(sf::Color::White);
 
-    sf::RectangleShape buttonHigh(sf::Vector2f(buttonWidth, buttonHeight));
-    buttonHigh.setPosition(700, buttonY);
+    sf::RectangleShape buttonHigh(sf::Vector2f(buttonWidth + 20, buttonHeight));
+    buttonHigh.setPosition(730, buttonY);
     buttonHigh.setFillColor(sf::Color::White);
 
-    sf::Text textLow("Torre bajo nivel", font, 18);
+    sf::Text textLow("Torre bajo nivel: 100", font, 18);
     textLow.setFillColor(sf::Color::Black);
     textLow.setPosition(110, buttonY + 8);
 
-    sf::Text textMid("Torre mediano nivel", font, 18);
+    sf::Text textMid("Torre mediano nivel: 500", font, 18);
     textMid.setFillColor(sf::Color::Black);
     textMid.setPosition(410, buttonY + 8);
 
-    sf::Text textHigh("Torre de alto nivel", font, 18);
+    sf::Text textHigh("Torre de alto nivel: 800", font, 18);
     textHigh.setFillColor(sf::Color::Black);
-    textHigh.setPosition(710, buttonY + 8);
+    textHigh.setPosition(740, buttonY + 8);
+
+    // Stats
+    sf::Text waveText;
+    waveText.setFont(font);
+    waveText.setCharacterSize(20);
+    waveText.setFillColor(sf::Color::White);
+    waveText.setPosition(20, 50);
+    waveText.setString("Generaciones transcurridas: " + std::to_string(NumWaves));
+
 
     // Variable para saber qué torre fue seleccionada
     enum TowerType { LOW, MID, HIGH };
@@ -109,12 +118,15 @@ void runGame() {
     creditText.setPosition(20, 20);
     creditText.setString("Creditos: " + std::to_string(credits));
 
+    int NumTower = 0; // Contador único de torres
+    std::map<Tower*, int> towerIDs; // Mapa para guardar el ID asignado a cada torre
+
 
     // Crear enemigos y asignarles camino
     enemyManager.spawnInitialEnemies(4);
     for (auto& enemy : enemyManager.getEnemies()) {
         sf::Vector2i start = enemy->getPosition();
-        sf::Vector2i goal = { 18, 5 };  
+        sf::Vector2i goal = { 18, 5 };
 
         std::vector<sf::Vector2i> path = findPathAStar(start, goal, grid);
         enemy->setPath(path);
@@ -160,6 +172,15 @@ void runGame() {
                     int col = (mouseX - GRID_OFFSET_X) / TILE_SIZE;
                     int row = (mouseY - GRID_OFFSET_Y) / TILE_SIZE;
 
+                    // Si ya hay una torre en esa celda, imprimir mensaje de mejora
+                    if (towers[row][col] != nullptr && credits >= 800) {
+                        credits -= 0;
+                        Tower* clickedTower = towers[row][col];
+                        int towerId = towerIDs[clickedTower];
+                        clickedTower->upgrade();
+                       
+                    }
+
                     if (grid[row][col] == EMPTY) {
                         int cost = 0;
                         Tower* newTower = nullptr;
@@ -186,6 +207,7 @@ void runGame() {
                         if (newTower != nullptr) {
                             credits -= cost;
                             towers[row][col] = newTower;
+                            towerIDs[newTower] = NumTower++;      
                             creditText.setString("Creditos: " + std::to_string(credits));
                             std::cout << "Torre colocada en: (" << row << ", " << col << "), Coste: " << cost << ", Creditos restantes: " << credits << "\n";
 
@@ -223,6 +245,7 @@ void runGame() {
             int cantidad = enemyManager.getEnemiesPerWave();
             std::cout << "[INFO] Nueva oleada con " << cantidad << " enemigos\n";
             enemyManager.spawnInitialEnemies(cantidad);
+            NumWaves += 1;
 
             for (auto& enemy : enemyManager.getEnemies()) {
                 sf::Vector2i start = enemy->getPosition();
@@ -231,6 +254,8 @@ void runGame() {
                 enemy->setPath(path);
             }
         }
+
+        waveText.setString("Generaciones transcurridas: " + std::to_string(NumWaves));
 
         // Limpiar enemigos previos del grid
         for (int row = 0; row < ROWS; ++row) {
@@ -290,9 +315,9 @@ void runGame() {
                 // Solo borra de la grilla si el enemigo sigue ahí (opcional)
                 if (grid[enemyRow][enemyCol] == 10) {
                     grid[enemyRow][enemyCol] = 0;
-					//credits += 50; // Recompensa por eliminar enemigo
+                    //credits += 50; // Recompensa por eliminar enemigo
                     std::cout << "Enemigo golpeado en (" << enemyRow << ", " << enemyCol << ")\n";
-					std::cout << "Creditos: " << credits << "\n";
+                    std::cout << "Creditos: " << credits << "\n";
                 }
 
                 it = projectiles.erase(it);
@@ -339,6 +364,7 @@ void runGame() {
             }
         }
 
+      
         // Dibujar botones
         gameWindow.draw(buttonLow);
         gameWindow.draw(buttonMid);
@@ -347,6 +373,7 @@ void runGame() {
         gameWindow.draw(textMid);
         gameWindow.draw(textHigh);
         gameWindow.draw(creditText);
+        gameWindow.draw(waveText);
         gameWindow.display();
     }
 
