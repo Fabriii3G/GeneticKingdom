@@ -9,6 +9,7 @@
 #include "Projectile.h"
 #include "EnemyManager.h"
 #include "Pathfinder.h"
+#include <set>
 
 const int COST_LOW = 100;
 const int COST_MID = 500;
@@ -37,8 +38,9 @@ enum TileType {
 
 void runGame() {
     std::vector<Projectile> projectiles;
+    std::set<Tower*> upgradedTowers;
     sf::Clock clock; // Para calcular deltaTime
-
+    int NumDeaths = 0;
     int credits = 100000;
     int NumWaves = 1;
 
@@ -52,10 +54,19 @@ void runGame() {
     sf::Texture backgroundTexture;
     backgroundTexture.loadFromFile("map.png");
 
-    sf::Texture textureLow, textureMid, textureHigh;
+    sf::Texture textureLow, textureMid, textureHigh, textureUpgrade1, textureUpgrade2, textureUpgrade3;
     textureLow.loadFromFile("TieFighter.png");
     textureMid.loadFromFile("Slave1.png");
     textureHigh.loadFromFile("XWing.png");
+    
+    
+    textureUpgrade1.loadFromFile("evo_magic.png");
+    textureUpgrade2.loadFromFile("evo_arrow.png");
+    textureUpgrade3.loadFromFile("evo_speed.png");
+
+    sf::Sprite upgradeOverlaySprite;
+    upgradeOverlaySprite.setTexture(textureUpgrade1);
+
 
     sf::Font font;
     if (!font.loadFromFile("Space.ttf")) {
@@ -173,14 +184,29 @@ void runGame() {
                     int row = (mouseY - GRID_OFFSET_Y) / TILE_SIZE;
 
                     // Si ya hay una torre en esa celda, imprimir mensaje de mejora
-                    if (towers[row][col] != nullptr && credits >= 800) {
-                        credits -= 0;
+                    if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 0 && credits >= 500) {
+                        credits -= 500;
                         Tower* clickedTower = towers[row][col];
                         int towerId = towerIDs[clickedTower];
+                        upgradedTowers.insert(clickedTower); 
                         clickedTower->upgrade();
                        
-                    }
+                    } else if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 1 && credits >= 1000) {
+                        credits -= 1000;
+                        Tower* clickedTower = towers[row][col];
+                        int towerId = towerIDs[clickedTower];
+                        upgradedTowers.insert(clickedTower);
+                        clickedTower->upgrade();
 
+                    } else if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 2 && credits >= 1500) {
+                        credits -= 1500;
+                        Tower* clickedTower = towers[row][col];
+                        int towerId = towerIDs[clickedTower];
+                        upgradedTowers.insert(clickedTower);
+                        clickedTower->upgrade();
+
+                    }
+                    
                     if (grid[row][col] == EMPTY) {
                         int cost = 0;
                         Tower* newTower = nullptr;
@@ -273,7 +299,7 @@ void runGame() {
                 sf::Vector2i pos = enemy->getPosition();
                 if (pos.y >= 0 && pos.y < ROWS && pos.x >= 0 && pos.x < COLS) {
                     int cell = grid[pos.y][pos.x];
-                    if (cell == 0 || cell == 5 || cell == 10) { // NO sobrescribe torres
+                    if (cell == 0 || cell == 5 || cell == 10) { 
                         grid[pos.y][pos.x] = 10;
                     }
                 }
@@ -287,7 +313,7 @@ void runGame() {
             }
         }
 
-        gameWindow.clear(sf::Color(55, 55, 55, 127));
+        gameWindow.clear(sf::Color::Black);
         gameWindow.draw(backgroundSprite);
 
         // Actualizar torres
@@ -296,7 +322,7 @@ void runGame() {
                 if (towers[row][col]) {
                     float x = GRID_OFFSET_X + col * TILE_SIZE;
                     float y = GRID_OFFSET_Y + row * TILE_SIZE;
-                    towers[row][col]->update(x, y, grid, row, col, projectiles);
+                    towers[row][col]->update(x, y, grid, row, col, projectiles, deltaTime);
                 }
             }
         }
@@ -312,10 +338,9 @@ void runGame() {
                 // Aplica daño al enemigo en esa posición
                 enemyManager.applyDamageAt(targetPos, it->getDamageType(), it->getDamageAmount());
 
-                // Solo borra de la grilla si el enemigo sigue ahí (opcional)
+           
                 if (grid[enemyRow][enemyCol] == 10) {
                     grid[enemyRow][enemyCol] = 0;
-                    //credits += 50; // Recompensa por eliminar enemigo
                     std::cout << "Enemigo golpeado en (" << enemyRow << ", " << enemyCol << ")\n";
                     std::cout << "Creditos: " << credits << "\n";
                 }
@@ -337,12 +362,70 @@ void runGame() {
 
                 if (grid[row][col] == LOWTOWER && towers[row][col]) {
                     towers[row][col]->draw(gameWindow, x, y);
+                    int lvl = towers[row][col]->upgradeCounter;
+
+                    if (upgradedTowers.count(towers[row][col])) {
+                        sf::Texture* overlayTexture = nullptr;
+
+                        if (lvl == 1) overlayTexture = &textureUpgrade1;
+                        else if (lvl == 2) overlayTexture = &textureUpgrade2;
+                        else if (lvl == 3) overlayTexture = &textureUpgrade3;
+
+                        if (overlayTexture != nullptr) {
+                            upgradeOverlaySprite.setTexture(*overlayTexture); 
+                            upgradeOverlaySprite.setPosition(x, y);
+                            upgradeOverlaySprite.setScale(
+                                TILE_SIZE / (float)overlayTexture->getSize().x,
+                                TILE_SIZE / (float)overlayTexture->getSize().y
+                            );
+                            gameWindow.draw(upgradeOverlaySprite);
+                        }
+                    }
                 }
+
                 else if (grid[row][col] == MIDTOWER && towers[row][col]) {
                     towers[row][col]->draw(gameWindow, x, y);
+                    int lvl = towers[row][col]->upgradeCounter;
+
+                    if (upgradedTowers.count(towers[row][col])) {
+                        sf::Texture* overlayTexture = nullptr;
+
+                        if (lvl == 1) overlayTexture = &textureUpgrade1;
+                        else if (lvl == 2) overlayTexture = &textureUpgrade2;
+                        else if (lvl == 3) overlayTexture = &textureUpgrade3;
+
+                        if (overlayTexture != nullptr) {
+                            upgradeOverlaySprite.setTexture(*overlayTexture); 
+                            upgradeOverlaySprite.setPosition(x, y);
+                            upgradeOverlaySprite.setScale(
+                                TILE_SIZE / (float)overlayTexture->getSize().x,
+                                TILE_SIZE / (float)overlayTexture->getSize().y
+                            );
+                            gameWindow.draw(upgradeOverlaySprite);
+                        }
+                    }
                 }
                 else if (grid[row][col] == HIGHTOWER && towers[row][col]) {
                     towers[row][col]->draw(gameWindow, x, y);
+                    int lvl = towers[row][col]->upgradeCounter;
+
+                    if (upgradedTowers.count(towers[row][col])) {
+                        sf::Texture* overlayTexture = nullptr;
+
+                        if (lvl == 1) overlayTexture = &textureUpgrade1;
+                        else if (lvl == 2) overlayTexture = &textureUpgrade2;
+                        else if (lvl == 3) overlayTexture = &textureUpgrade3;
+
+                        if (overlayTexture != nullptr) {
+                            upgradeOverlaySprite.setTexture(*overlayTexture); 
+                            upgradeOverlaySprite.setPosition(x, y);
+                            upgradeOverlaySprite.setScale(
+                                TILE_SIZE / (float)overlayTexture->getSize().x,
+                                TILE_SIZE / (float)overlayTexture->getSize().y
+                            );
+                            gameWindow.draw(upgradeOverlaySprite);
+                        }
+                    }
                 }
                 else {
                     tileShape.setPosition(x, y);

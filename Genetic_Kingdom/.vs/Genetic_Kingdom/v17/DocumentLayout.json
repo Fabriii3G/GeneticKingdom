@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MidTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:MidTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,28 +19,28 @@
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HighTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:GameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MidTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:MidTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HighTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HighTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:LowTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HarpyEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HarpyEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:LowTower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Tower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EvolutionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:EvolutionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -43,20 +51,24 @@
       "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Tower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Tower.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\DamageType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:DamageType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:LowTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HarpyEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HarpyEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MidTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:MidTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HighTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:HighTower.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{465B1757-8C69-45D0-ABFB-DCDC12721021}|Genetic_Kingdom.vcxproj|C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\DarkElfEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -110,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 32,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,44 +154,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
+              "Title": "EvolutionManager.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EvolutionManager.h",
+              "RelativeDocumentMoniker": "EvolutionManager.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EvolutionManager.h",
+              "RelativeToolTip": "EvolutionManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-28T00:30:20.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Projectile.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.h",
+              "RelativeDocumentMoniker": "Projectile.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.h",
+              "RelativeToolTip": "Projectile.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T23:00:57.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DamageType.h",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\DamageType.h",
+              "RelativeDocumentMoniker": "DamageType.h",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\DamageType.h",
+              "RelativeToolTip": "DamageType.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T22:59:09.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Projectile.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp",
               "RelativeDocumentMoniker": "Projectile.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Projectile.cpp",
               "RelativeToolTip": "Projectile.cpp",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAMAAAApAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAiwCEAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-26T22:19:34.441Z"
+              "WhenOpened": "2025-05-26T22:19:34.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "Tower.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp",
               "RelativeDocumentMoniker": "Tower.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Tower.cpp",
               "RelativeToolTip": "Tower.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAiwD0AAAAAAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-26T22:08:14.863Z"
+              "WhenOpened": "2025-05-26T22:08:14.863Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MidTower.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MidTower.cpp",
               "RelativeDocumentMoniker": "MidTower.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MidTower.cpp",
               "RelativeToolTip": "MidTower.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAZAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-26T22:00:17.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "HighTower.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HighTower.h",
               "RelativeDocumentMoniker": "HighTower.h",
@@ -187,12 +240,11 @@
               "RelativeToolTip": "HighTower.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-26T21:57:41.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T21:57:41.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "MidTower.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MidTower.h",
               "RelativeDocumentMoniker": "MidTower.h",
@@ -205,33 +257,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Tower.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Tower.h",
               "RelativeDocumentMoniker": "Tower.h",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Tower.h",
               "RelativeToolTip": "Tower.h",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-26T21:53:58.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "LowTower.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h",
               "RelativeDocumentMoniker": "LowTower.h",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.h",
               "RelativeToolTip": "LowTower.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-26T21:53:56.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HighTower.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HighTower.cpp",
               "RelativeDocumentMoniker": "HighTower.cpp",
@@ -244,20 +296,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "LowTower.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.cpp",
               "RelativeDocumentMoniker": "LowTower.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\LowTower.cpp",
               "RelativeToolTip": "LowTower.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-26T21:52:53.035Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MercenaryEnemy.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\MercenaryEnemy.cpp",
               "RelativeDocumentMoniker": "MercenaryEnemy.cpp",
@@ -269,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "HarpyEnemy.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\HarpyEnemy.cpp",
               "RelativeDocumentMoniker": "HarpyEnemy.cpp",
@@ -277,11 +329,12 @@
               "RelativeToolTip": "HarpyEnemy.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-26T20:47:56.748Z"
+              "WhenOpened": "2025-05-26T20:47:56.748Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "DarkElfEnemy.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\DarkElfEnemy.cpp",
               "RelativeDocumentMoniker": "DarkElfEnemy.cpp",
@@ -293,19 +346,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "EnemyManager.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp",
               "RelativeDocumentMoniker": "EnemyManager.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.cpp",
               "RelativeToolTip": "EnemyManager.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAeAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-26T20:06:17.373Z"
+              "WhenOpened": "2025-05-26T20:06:17.373Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "EnemyManager.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\EnemyManager.h",
               "RelativeDocumentMoniker": "EnemyManager.h",
@@ -317,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "OgreEnemy.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.h",
               "RelativeDocumentMoniker": "OgreEnemy.h",
@@ -329,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "OgreEnemy.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\OgreEnemy.cpp",
               "RelativeDocumentMoniker": "OgreEnemy.cpp",
@@ -341,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Enemy.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Enemy.h",
               "RelativeDocumentMoniker": "Enemy.h",
@@ -353,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Enemy.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Enemy.cpp",
               "RelativeDocumentMoniker": "Enemy.cpp",
@@ -365,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Pathfinder.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Pathfinder.cpp",
               "RelativeDocumentMoniker": "Pathfinder.cpp",
@@ -377,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Pathfinder.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Pathfinder.h",
               "RelativeDocumentMoniker": "Pathfinder.h",
@@ -389,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "Grid.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Grid.cpp",
               "RelativeDocumentMoniker": "Grid.cpp",
@@ -401,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "Grid.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\Grid.h",
               "RelativeDocumentMoniker": "Grid.h",
@@ -413,20 +467,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GameScreen.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
               "RelativeDocumentMoniker": "GameScreen.cpp",
               "ToolTip": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.cpp",
               "RelativeToolTip": "GameScreen.cpp",
-              "ViewState": "AQIAAJ0AAAAAAAAAAAASwLIAAAA9AAAA",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAqwDsBAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-06T20:23:35.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GameScreen.h",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\GameScreen.h",
               "RelativeDocumentMoniker": "GameScreen.h",
@@ -439,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\XPC\\OneDrive - Estudiantes ITCR\\Escritorio\\ddd\\GeneticKingdom\\Genetic_Kingdom\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -447,8 +501,7 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T17:34:59.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T17:34:59.367Z"
             }
           ]
         }

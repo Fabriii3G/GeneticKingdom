@@ -30,6 +30,9 @@ Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int target
     case DamageType::Artillery:
         shape.setFillColor(sf::Color::Red);
         break;
+    case DamageType::SpecialAtk:
+        shape.setFillColor(sf::Color(255, 215, 0)); 
+        break;
     }
 }
 

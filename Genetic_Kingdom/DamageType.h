@@ -2,5 +2,6 @@
 enum class DamageType {
     Arrows,
     Magic,
-    Artillery
+    Artillery,
+    SpecialAtk
 };

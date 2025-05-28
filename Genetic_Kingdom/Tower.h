@@ -8,7 +8,7 @@ protected:
     float damageAmount;
     float speed;
     float range;
-    float specialCooldown;
+    float specialCooldown = 10;
     float attackCooldown;
 
     sf::Sprite sprite;
@@ -17,12 +17,17 @@ protected:
     float attackTimer = 0.f;
 
 public:
+    int specialCounter = 0;
+
+    int upgradeCounter = 0;
+    void upgrade();
+
     Tower(int dmg, float spd, float rng, float spCd, float atkCd);
     virtual ~Tower();
 
     void draw(sf::RenderWindow& window, float x, float y);
     void setTexture(const sf::Texture& texture, float tileSize);
-    virtual void update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles);
+    virtual void update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles, float deltaTime);
 
     float getRange() const { return range; }
 
@@ -34,7 +39,6 @@ public:
     DamageType getDamageType() const { return damageType; }
     float getDamageAmount() const { return damageAmount; }
 
-    virtual void upgrade() = 0; // método puro virtual en clase base
-
+  
 
 };

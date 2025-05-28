@@ -1,6 +1,7 @@
 
 #include "Tower.h"
 #include "DamageType.h"
+#include <Iostream>
 const int TILE_SIZE = 32;
 const int ROWS = 25;
 const int COLS = 25;
@@ -38,8 +39,7 @@ void Tower::draw(sf::RenderWindow& window, float x, float y) {
     }
 }
 
-void Tower::update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles) {
-
+void Tower::update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles, float deltaTime) {
     for (int dr = -range; dr <= range; ++dr) {
         for (int dc = -range; dc <= range; ++dc) {
             int newRow = row + dr;
@@ -57,5 +57,16 @@ void Tower::update(float x, float y, int grid[25][25], int row, int col, std::ve
                 return; // Solo dispara una vez por update
             }
         }
+    }
+}
+
+
+
+void Tower::upgrade() {
+    if (upgradeCounter < 3) {
+        damage += 2;
+        range += 1;
+        upgradeCounter += 1;
+        std::cout << "LowTower mejorada: dano=" << damage << ", rango=" << range << " mejoras realizadas: " << upgradeCounter << "\n";
     }
 }
