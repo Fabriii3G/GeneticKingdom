@@ -21,12 +21,13 @@ std::string DarkElfEnemy::getType() const {
 
 void DarkElfEnemy::draw(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const {
     sf::Sprite s = sprite;
-    s.setScale(static_cast<float>(tileSize) / s.getTexture()->getSize().x,
-        static_cast<float>(tileSize) / s.getTexture()->getSize().y);
-
     s.setPosition(offset.x + position.x * tileSize, offset.y + position.y * tileSize);
     window.draw(s);
 
-    // Dibuja evoluciones encima
-    drawEvolutions(window, tileSize, offset);
+    if (evolution) {
+        sf::Sprite overlay = evolution->getOverlaySprite();
+        overlay.setPosition(s.getPosition());
+        window.draw(overlay);
+    }
+
 }

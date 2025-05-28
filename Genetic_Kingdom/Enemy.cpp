@@ -105,10 +105,16 @@ float Enemy::getResistanceArtillery() const{
 }
 
 void Enemy::addEvolution(const EnemyEvolution& evo) {
-    // Aplica la evolución a los stats
+    evolution = std::make_shared<EnemyEvolution>(evo);
+
+    // Aplicar los valores de bonificación a los atributos del enemigo
     evo.applyTo(health, speed, resistanceArrows, resistanceMagic, resistanceArtillery);
-    evolutions.push_back(evo);
+
+    // Obtener sprite de superposición
+    spriteOverlay = evolution->getOverlaySprite();  // Asegúrate de que Enemy tenga spriteOverlay declarado
 }
+
+
 
 void Enemy::drawEvolutions(sf::RenderWindow& window, int tileSize, sf::Vector2f offset) const {
     for (const auto& evo : evolutions) {

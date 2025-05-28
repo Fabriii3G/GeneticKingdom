@@ -219,6 +219,7 @@ void runGame() {
         enemyManager.updateEnemies(deltaTime);
 
         if (enemyManager.isWaveReady(deltaTime)) {
+            enemyManager.evolve();
             int cantidad = enemyManager.getEnemiesPerWave();
             std::cout << "[INFO] Nueva oleada con " << cantidad << " enemigos\n";
             enemyManager.spawnInitialEnemies(cantidad);

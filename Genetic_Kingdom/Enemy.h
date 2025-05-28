@@ -21,6 +21,8 @@ protected:
     bool pathBlocked = false;
 
     std::vector<EnemyEvolution> evolutions;
+    std::shared_ptr<EnemyEvolution> evolution = nullptr;
+    sf::Sprite spriteOverlay;
 
     std::vector<sf::Vector2i> path; // ruta a seguir
     int pathIndex; // siguiente paso en la ruta

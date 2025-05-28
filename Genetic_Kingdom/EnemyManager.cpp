@@ -122,8 +122,21 @@ void EnemyManager::evolve() {
 
         auto child = crossover(p1, p2);
         mutate(child);
+
+        // Aplicar evolución al hijo generado
+        float bonus = generation * 10.0f;
+        EnemyEvolution evo(
+            "Gen " + std::to_string(generation),
+            bonus,                       // HP extra
+            0.05f * generation,          // Velocidad extra
+            0.05f, 0.05f, 0.05f,         // Resistencias extra
+            "evo.png"                    // Sprite overlay de evolución
+        );
+        child->addEvolution(evo);
+
         newGeneration.push_back(child);
     }
+
 
     enemies = newGeneration;
     generation++;
