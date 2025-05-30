@@ -1,4 +1,4 @@
-#include "Enemy.h"
+ï»¿#include "Enemy.h"
 #include <iostream>
 #include <cmath>
 //#include "GameScreen.h"
@@ -20,7 +20,7 @@ void Enemy::move(float deltaTime) {
 
     timeAccumulator += deltaTime;
 
-    
+
     float moveInterval = 1.0f / speed; // tiempo entre celdas
 
     if (timeAccumulator >= moveInterval) {
@@ -48,12 +48,12 @@ void Enemy::receiveDamage(DamageType type, float amount) {
 
     health -= actualDamage;
 
-    std::cout << getType() << " recibió " << actualDamage
-        << " de daño. Vida restante: " << health << "\n";
+    std::cout << getType() << " recibiï¿½ " << actualDamage
+        << " de daï¿½o. Vida restante: " << health << "\n";
 
     if (health <= 0.0f) {
         std::cout << getType() << " ha muerto.\n";
-		//credits += 50; // Recompensa por eliminar enemigo
+        //credits += 50; // Recompensa por eliminar enemigo
     }
 }
 
@@ -70,7 +70,7 @@ sf::Vector2i Enemy::getPosition() const {
 void Enemy::setPath(const std::vector<sf::Vector2i>& newPath) {
     if (newPath.empty()) {
         pathBlocked = true;
-        std::cout << getType() << " quedó bloqueado sin ruta al castillo.\n";
+        std::cout << getType() << " quedï¿½ bloqueado sin ruta al castillo.\n";
     }
     else {
         path = newPath;
@@ -80,32 +80,32 @@ void Enemy::setPath(const std::vector<sf::Vector2i>& newPath) {
 }
 
 float Enemy::getFitness() const {
-    // Por defecto, fitness podría ser cuántas celdas recorrió
+    // Por defecto, fitness podrï¿½a ser cuï¿½ntas celdas recorriï¿½
     return static_cast<float>(pathIndex);
 }
 
-float Enemy::getHealth() const{
-	return health;
+float Enemy::getHealth() const {
+    return health;
 }
 
-float Enemy::getSpeed() const{
-	return speed;
+float Enemy::getSpeed() const {
+    return speed;
 }
 
-float Enemy::getResistanceArrows() const{
-	return resistanceArrows;
+float Enemy::getResistanceArrows() const {
+    return resistanceArrows;
 }
 
-float Enemy::getResistanceMagic() const{
-	return resistanceMagic;
+float Enemy::getResistanceMagic() const {
+    return resistanceMagic;
 }
 
-float Enemy::getResistanceArtillery() const{
-	return resistanceArtillery;
+float Enemy::getResistanceArtillery() const {
+    return resistanceArtillery;
 }
 
 void Enemy::addEvolution(const EnemyEvolution& evo) {
-    // Aplica la evolución a los stats
+    // Aplica la evoluciï¿½n a los stats
     evo.applyTo(health, speed, resistanceArrows, resistanceMagic, resistanceArtillery);
     evolutions.push_back(evo);
 }
@@ -118,4 +118,9 @@ void Enemy::drawEvolutions(sf::RenderWindow& window, int tileSize, sf::Vector2f 
         overlay.setPosition(offset.x + position.x * tileSize, offset.y + position.y * tileSize);
         window.draw(overlay);
     }
+}
+
+void Enemy::kill() {
+    health = 0;
+    killedByPlayer = false;
 }

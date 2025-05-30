@@ -27,7 +27,7 @@ public:
 
     void draw(sf::RenderWindow& window, float x, float y);
     void setTexture(const sf::Texture& texture, float tileSize);
-    virtual void update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles, float deltaTime);
+    virtual void update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles, float deltaTime, int rand);
 
     float getRange() const { return range; }
 
@@ -39,6 +39,6 @@ public:
     DamageType getDamageType() const { return damageType; }
     float getDamageAmount() const { return damageAmount; }
 
-  
+
 
 };

@@ -1,4 +1,4 @@
-#include <SFML/Graphics.hpp>
+ï»¿#include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Grid.h"
 #include "LowTower.h"
@@ -10,6 +10,8 @@
 #include "EnemyManager.h"
 #include "Pathfinder.h"
 #include <set>
+#include <cstdlib> 
+#include <ctime>
 
 const int COST_LOW = 100;
 const int COST_MID = 500;
@@ -28,6 +30,12 @@ const int MAP_HEIGHT = ROWS * TILE_SIZE;  // 800 px
 const int GRID_OFFSET_X = (WINDOW_WIDTH - MAP_WIDTH) / 2;
 const int GRID_OFFSET_Y = (WINDOW_HEIGHT - MAP_HEIGHT) / 2;
 
+
+// Funciï¿½n que devuelve un nï¿½mero aleatorio entre 1 y 10
+int RandomNumber() {
+    srand(time(0));
+    return rand() % 10 + 1;
+}
 
 enum TileType {
     EMPTY = 0,
@@ -58,8 +66,8 @@ void runGame() {
     textureLow.loadFromFile("TieFighter.png");
     textureMid.loadFromFile("Slave1.png");
     textureHigh.loadFromFile("XWing.png");
-    
-    
+
+
     textureUpgrade1.loadFromFile("evo_magic.png");
     textureUpgrade2.loadFromFile("evo_arrow.png");
     textureUpgrade3.loadFromFile("evo_speed.png");
@@ -117,7 +125,7 @@ void runGame() {
     waveText.setString("Generaciones transcurridas: " + std::to_string(NumWaves));
 
 
-    // Variable para saber qué torre fue seleccionada
+    // Variable para saber quï¿½ torre fue seleccionada
     enum TowerType { LOW, MID, HIGH };
     TowerType selectedTowerType = LOW;
 
@@ -129,7 +137,7 @@ void runGame() {
     creditText.setPosition(20, 20);
     creditText.setString("Creditos: " + std::to_string(credits));
 
-    int NumTower = 0; // Contador único de torres
+    int NumTower = 0; // Contador ï¿½nico de torres
     std::map<Tower*, int> towerIDs; // Mapa para guardar el ID asignado a cada torre
 
 
@@ -146,7 +154,7 @@ void runGame() {
 
     // --- Loop principal ---
     while (gameWindow.isOpen()) {
-        float deltaTime = clock.restart().asSeconds(); // Declaración única de deltaTime
+        float deltaTime = clock.restart().asSeconds(); // Declaraciï¿½n ï¿½nica de deltaTime
 
         sf::Event event;
         while (gameWindow.pollEvent(event)) {
@@ -188,17 +196,19 @@ void runGame() {
                         credits -= 500;
                         Tower* clickedTower = towers[row][col];
                         int towerId = towerIDs[clickedTower];
-                        upgradedTowers.insert(clickedTower); 
+                        upgradedTowers.insert(clickedTower);
                         clickedTower->upgrade();
-                       
-                    } else if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 1 && credits >= 1000) {
+
+                    }
+                    else if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 1 && credits >= 1000) {
                         credits -= 1000;
                         Tower* clickedTower = towers[row][col];
                         int towerId = towerIDs[clickedTower];
                         upgradedTowers.insert(clickedTower);
                         clickedTower->upgrade();
 
-                    } else if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 2 && credits >= 1500) {
+                    }
+                    else if (towers[row][col] != nullptr && towers[row][col]->upgradeCounter == 2 && credits >= 1500) {
                         credits -= 1500;
                         Tower* clickedTower = towers[row][col];
                         int towerId = towerIDs[clickedTower];
@@ -206,7 +216,7 @@ void runGame() {
                         clickedTower->upgrade();
 
                     }
-                    
+
                     if (grid[row][col] == EMPTY) {
                         int cost = 0;
                         Tower* newTower = nullptr;
@@ -233,7 +243,7 @@ void runGame() {
                         if (newTower != nullptr) {
                             credits -= cost;
                             towers[row][col] = newTower;
-                            towerIDs[newTower] = NumTower++;      
+                            towerIDs[newTower] = NumTower++;
                             creditText.setString("Creditos: " + std::to_string(credits));
                             std::cout << "Torre colocada en: (" << row << ", " << col << "), Coste: " << cost << ", Creditos restantes: " << credits << "\n";
 
@@ -259,6 +269,17 @@ void runGame() {
                             std::cout << "No tienes suficientes creditos para esta torre.\n";
                         }
                     }
+                }
+            }
+        }
+
+
+
+        for (auto& enemy : enemyManager.getEnemies()) {
+            if (enemy->isAlive()) {
+                sf::Vector2i current = enemy->getPosition();
+                if (current == sf::Vector2i(18, 5)) {
+                    enemy->kill();
                 }
             }
         }
@@ -299,7 +320,7 @@ void runGame() {
                 sf::Vector2i pos = enemy->getPosition();
                 if (pos.y >= 0 && pos.y < ROWS && pos.x >= 0 && pos.x < COLS) {
                     int cell = grid[pos.y][pos.x];
-                    if (cell == 0 || cell == 5 || cell == 10) { 
+                    if (cell == 0 || cell == 5 || cell == 10) {
                         grid[pos.y][pos.x] = 10;
                     }
                 }
@@ -322,7 +343,7 @@ void runGame() {
                 if (towers[row][col]) {
                     float x = GRID_OFFSET_X + col * TILE_SIZE;
                     float y = GRID_OFFSET_Y + row * TILE_SIZE;
-                    towers[row][col]->update(x, y, grid, row, col, projectiles, deltaTime);
+                    towers[row][col]->update(x, y, grid, row, col, projectiles, deltaTime, RandomNumber());
                 }
             }
         }
@@ -335,14 +356,13 @@ void runGame() {
 
                 sf::Vector2i targetPos(enemyCol, enemyRow);
 
-                // Aplica daño al enemigo en esa posición
+                // Aplica daï¿½o al enemigo en esa posiciï¿½n
                 enemyManager.applyDamageAt(targetPos, it->getDamageType(), it->getDamageAmount());
 
-           
+
                 if (grid[enemyRow][enemyCol] == 10) {
                     grid[enemyRow][enemyCol] = 0;
                     std::cout << "Enemigo golpeado en (" << enemyRow << ", " << enemyCol << ")\n";
-                    std::cout << "Creditos: " << credits << "\n";
                 }
 
                 it = projectiles.erase(it);
@@ -372,7 +392,7 @@ void runGame() {
                         else if (lvl == 3) overlayTexture = &textureUpgrade3;
 
                         if (overlayTexture != nullptr) {
-                            upgradeOverlaySprite.setTexture(*overlayTexture); 
+                            upgradeOverlaySprite.setTexture(*overlayTexture);
                             upgradeOverlaySprite.setPosition(x, y);
                             upgradeOverlaySprite.setScale(
                                 TILE_SIZE / (float)overlayTexture->getSize().x,
@@ -395,7 +415,7 @@ void runGame() {
                         else if (lvl == 3) overlayTexture = &textureUpgrade3;
 
                         if (overlayTexture != nullptr) {
-                            upgradeOverlaySprite.setTexture(*overlayTexture); 
+                            upgradeOverlaySprite.setTexture(*overlayTexture);
                             upgradeOverlaySprite.setPosition(x, y);
                             upgradeOverlaySprite.setScale(
                                 TILE_SIZE / (float)overlayTexture->getSize().x,
@@ -417,7 +437,7 @@ void runGame() {
                         else if (lvl == 3) overlayTexture = &textureUpgrade3;
 
                         if (overlayTexture != nullptr) {
-                            upgradeOverlaySprite.setTexture(*overlayTexture); 
+                            upgradeOverlaySprite.setTexture(*overlayTexture);
                             upgradeOverlaySprite.setPosition(x, y);
                             upgradeOverlaySprite.setScale(
                                 TILE_SIZE / (float)overlayTexture->getSize().x,
@@ -447,7 +467,7 @@ void runGame() {
             }
         }
 
-      
+
         // Dibujar botones
         gameWindow.draw(buttonLow);
         gameWindow.draw(buttonMid);

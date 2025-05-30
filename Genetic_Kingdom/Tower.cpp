@@ -1,4 +1,3 @@
-
 #include "Tower.h"
 #include "DamageType.h"
 #include <Iostream>
@@ -39,22 +38,45 @@ void Tower::draw(sf::RenderWindow& window, float x, float y) {
     }
 }
 
-void Tower::update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles, float deltaTime) {
-    for (int dr = -range; dr <= range; ++dr) {
-        for (int dc = -range; dc <= range; ++dc) {
-            int newRow = row + dr;
-            int newCol = col + dc;
+void Tower::update(float x, float y, int grid[25][25], int row, int col, std::vector<Projectile>& projectiles, float deltaTime, int rand) {
 
-            if (newRow >= 0 && newRow < 25 && newCol >= 0 && newCol < 25 && grid[newRow][newCol] == 10) {
-                float enemyX = GRID_OFFSET_X + newCol * TILE_SIZE + TILE_SIZE / 2;
-                float enemyY = GRID_OFFSET_Y + newRow * TILE_SIZE + TILE_SIZE / 2;
+    if (rand == 10) {
+        for (int dr = -range; dr <= range; ++dr) {
+            for (int dc = -range; dc <= range; ++dc) {
+                int newRow = row + dr;
+                int newCol = col + dc;
 
-                // Centro de la torre
-                sf::Vector2f start(x + TILE_SIZE / 2, y + TILE_SIZE / 2);
-                sf::Vector2f target(enemyX, enemyY);
+                if (newRow >= 0 && newRow < 25 && newCol >= 0 && newCol < 25 && grid[newRow][newCol] == 10) {
+                    float enemyX = GRID_OFFSET_X + newCol * TILE_SIZE + TILE_SIZE / 2;
+                    float enemyY = GRID_OFFSET_Y + newRow * TILE_SIZE + TILE_SIZE / 2;
 
-                projectiles.emplace_back(start, target, newRow, newCol, damageType, damageAmount);
-                return; // Solo dispara una vez por update
+                    // Centro de la torre
+                    sf::Vector2f start(x + TILE_SIZE / 2, y + TILE_SIZE / 2);
+                    sf::Vector2f target(enemyX, enemyY);
+
+                    projectiles.emplace_back(start, target, newRow, newCol, DamageType::SpecialAtk, 30);
+                    return; // Solo dispara una vez por update
+                }
+            }
+        }
+    }
+    else {
+        for (int dr = -range; dr <= range; ++dr) {
+            for (int dc = -range; dc <= range; ++dc) {
+                int newRow = row + dr;
+                int newCol = col + dc;
+
+                if (newRow >= 0 && newRow < 25 && newCol >= 0 && newCol < 25 && grid[newRow][newCol] == 10) {
+                    float enemyX = GRID_OFFSET_X + newCol * TILE_SIZE + TILE_SIZE / 2;
+                    float enemyY = GRID_OFFSET_Y + newRow * TILE_SIZE + TILE_SIZE / 2;
+
+                    // Centro de la torre
+                    sf::Vector2f start(x + TILE_SIZE / 2, y + TILE_SIZE / 2);
+                    sf::Vector2f target(enemyX, enemyY);
+
+                    projectiles.emplace_back(start, target, newRow, newCol, damageType, damageAmount);
+                    return; // Solo dispara una vez por update
+                }
             }
         }
     }

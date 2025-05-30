@@ -1,4 +1,4 @@
-#include "EnemyManager.h"
+ï»¿#include "EnemyManager.h"
 #include "OgreEnemy.h"
 #include "DarkElfEnemy.h"
 #include "HarpyEnemy.h"
@@ -38,7 +38,7 @@ void EnemyManager::updateEnemies(float deltaTime, int& credits) {
         if (e->isAlive()) {
             e->move(deltaTime);
         }
-        else {
+        else if (e->killedByPlayer) {
             std::string type = e->getType();
             if (type == "Ogro") {
                 credits += 75;
@@ -52,8 +52,6 @@ void EnemyManager::updateEnemies(float deltaTime, int& credits) {
             else {
                 credits += 150;
             }
-            
-            
         }
     }
 
@@ -91,7 +89,7 @@ bool EnemyManager::isWaveReady(float deltaTime) {
     if (cooldownTimer >= waveCooldown) {
         waitingForNextWave = false;
         cooldownTimer = 0.0f;
-        enemiesPerWave *= 2; 
+        enemiesPerWave *= 2;
         return true;
     }
 
@@ -125,7 +123,7 @@ void EnemyManager::setPathsToAll(const std::vector<sf::Vector2i>& path) {
 void EnemyManager::evolve() {
     std::vector<std::shared_ptr<Enemy>> newGeneration;
 
-    // Selección por fitness (orden descendente)
+    // Selecciï¿½n por fitness (orden descendente)
     std::sort(enemies.begin(), enemies.end(), [](const auto& a, const auto& b) {
         return a->getFitness() > b->getFitness();
         });
@@ -147,7 +145,7 @@ void EnemyManager::evolve() {
 }
 
 std::shared_ptr<Enemy> EnemyManager::crossover(const Enemy& parent1, const Enemy& parent2) {
-    sf::Vector2i start = { rand() % 25, 24 }; // posición random en fila 24
+    sf::Vector2i start = { rand() % 25, 24 }; // posiciï¿½n random en fila 24
 
     // Promediar atributos
     float hp = (parent1.getFitness() + parent2.getFitness()) / 2.0f + 100.0f;
@@ -172,7 +170,7 @@ void EnemyManager::mutate(std::shared_ptr<Enemy>& enemy) {
         const EnemyEvolution& evo = evoManager.getEvolution(selectedName);
 
         enemy->addEvolution(evo);
-        std::cout << "[MUTACION] Se aplicó evolución: " << selectedName << "\n";
+        std::cout << "[MUTACION] Se aplicï¿½ evoluciï¿½n: " << selectedName << "\n";
     }
 }
 

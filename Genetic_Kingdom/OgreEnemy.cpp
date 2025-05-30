@@ -8,7 +8,6 @@ OgreEnemy::OgreEnemy(sf::Vector2i startPos, float hp)
         std::cerr << "Error cargando ogre.png\n";
     }
     sprite.setTexture(texture);
-    //sprite.setScale(0.5f, 0.5f); // ajustar según tamaño
 }
 
 
