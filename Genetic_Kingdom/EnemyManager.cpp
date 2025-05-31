@@ -46,7 +46,7 @@ void EnemyManager::spawnInitialEnemies(int count) {
 
 
 
-void EnemyManager::updateEnemies(float deltaTime, int& credits) {
+void EnemyManager::updateEnemies(float deltaTime, int& credits, int& deaths) {
     for (auto& e : enemies) {
         if (e->isAlive()) {
             e->move(deltaTime);
@@ -54,15 +54,19 @@ void EnemyManager::updateEnemies(float deltaTime, int& credits) {
         else if (e->killedByPlayer) {
             std::string type = e->getType();
             if (type == "Ogro") {
+                deaths += 1;
                 credits += 75;
             }
             else if (type == "Harpia") {
+                deaths += 1;
                 credits += 100;
             }
             else if (type == "Elfo Oscuro") {
+                deaths += 1;
                 credits += 125;
             }
             else {
+                deaths += 1;
                 credits += 150;
             }
         }
@@ -249,4 +253,8 @@ std::map<std::string, float> EnemyManager::getAverageFitnessPerType() const {
     }
 
     return averageFitness;
+}
+
+float EnemyManager::getMutationRate() {
+    return mutationRate;
 }

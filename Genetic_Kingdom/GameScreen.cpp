@@ -34,7 +34,7 @@ const int GRID_OFFSET_X = (WINDOW_WIDTH - MAP_WIDTH) / 2;
 const int GRID_OFFSET_Y = (WINDOW_HEIGHT - MAP_HEIGHT) / 2;
 
 
-// Funci�n que devuelve un n�mero aleatorio entre 1 y 10
+// Funcion que devuelve un n�mero aleatorio entre 1 y 10
 int RandomNumber() {
     srand(time(0));
     return rand() % 10 + 1;
@@ -48,10 +48,13 @@ enum TileType {
 };
 
 void runGame() {
+
+  
+
     std::vector<Projectile> projectiles;
     std::set<Tower*> upgradedTowers;
     sf::Clock clock; // Para calcular deltaTime
-    int NumDeaths = 0;
+    int deaths = 0;
     int credits = 100000;
     int NumWaves = 1;
 
@@ -60,7 +63,7 @@ void runGame() {
     EnemyManager enemyManager;
     int grid[ROWS][COLS] = { 0 };
     fillTiles(grid);
-
+    float mutRate = enemyManager.getMutationRate();
     // Cargar recursos
     sf::Texture backgroundTexture;
     backgroundTexture.loadFromFile("map.png");
@@ -120,19 +123,34 @@ void runGame() {
     textHigh.setPosition(740, buttonY + 8);
 
     // Stats
-    sf::Text waveText;
+    sf::Text waveText, deathsText, RateText, MutText;
     waveText.setFont(font);
     waveText.setCharacterSize(20);
     waveText.setFillColor(sf::Color::White);
     waveText.setPosition(20, 50);
     waveText.setString("Generaciones transcurridas: " + std::to_string(NumWaves));
+    deathsText.setFont(font);
+    deathsText.setCharacterSize(20);
+    deathsText.setFillColor(sf::Color::White);
+    deathsText.setPosition(20, 110);
+    deathsText.setString("Muertes: " + std::to_string(deaths));
+    MutText.setFont(font);
+    MutText.setCharacterSize(20);
+    MutText.setFillColor(sf::Color::White);
+    MutText.setPosition(20, 140);
+    MutText.setString("Mutaciones: " + std::to_string(0));
+    RateText.setFont(font);
+    RateText.setCharacterSize(20);
+    RateText.setFillColor(sf::Color::White);
+    RateText.setPosition(20, 80);
+    RateText.setString("Probabilidad de mutar: " + std::to_string(mutRate) + "%");
 
     sf::Text fitnessText;
     fitnessText.setFont(font);
     fitnessText.setCharacterSize(20);
     fitnessText.setFillColor(sf::Color::White);
-    fitnessText.setPosition(20, 80);
-    fitnessText.setString("Fitness promedio por tipo:");
+    fitnessText.setPosition(20, 170);
+    fitnessText.setString("Fitness promedio:");
 
 
     // Variable para saber que torre fue seleccionada
@@ -147,9 +165,10 @@ void runGame() {
     creditText.setPosition(20, 20);
     creditText.setString("Creditos: " + std::to_string(credits));
 
-    int NumTower = 0; // Contador �nico de torres
+    int NumTower = 0; // Contador unico de torres
     std::map<Tower*, int> towerIDs; // Mapa para guardar el ID asignado a cada torre
 
+    
 
     // Crear enemigos y asignarles camino
     enemyManager.spawnInitialEnemies(4);
@@ -295,16 +314,27 @@ void runGame() {
         }
 
         // Actualizar enemigos
-        enemyManager.updateEnemies(deltaTime, credits);
+        enemyManager.updateEnemies(deltaTime, credits, deaths);
         creditText.setString("Creditos: " + std::to_string(credits));
-
+        deathsText.setString("Muertes: " + std::to_string(deaths));
         // Calcular y mostrar fitness promedio antes de limpiar enemigos
         auto averages = enemyManager.getAverageFitnessPerType();
 
         std::ostringstream oss;
-        oss << "Fitness promedio por tipo:\n";
+        oss << "Fitness promedio:\n";
         for (const auto& pair : averages) {
-            oss << pair.first << ": " << std::fixed << std::setprecision(2) << pair.second << "\n";
+            if (pair.first == "Ogro") {
+                oss << "Clone Tropper" << ": " << std::fixed << std::setprecision(2) << pair.second << "\n";
+            } else if (pair.first == "Harpia") {
+                oss << "Darth Maul" << ": " << std::fixed << std::setprecision(2) << pair.second << "\n";
+            }
+            else if (pair.first == "Elfo Oscuro") {
+                oss << "Jawa" << ": " << std::fixed << std::setprecision(2) << pair.second << "\n";
+            }
+            else {
+                oss << "Greedo" << ": " << std::fixed << std::setprecision(2) << pair.second << "\n";
+            }
+            
         }
         fitnessText.setString(oss.str());
 
@@ -508,6 +538,9 @@ void runGame() {
         gameWindow.draw(creditText);
         gameWindow.draw(waveText);
         gameWindow.draw(fitnessText);
+        gameWindow.draw(deathsText);
+        gameWindow.draw(RateText);
+        gameWindow.draw(MutText);
         gameWindow.display();
     }
 
