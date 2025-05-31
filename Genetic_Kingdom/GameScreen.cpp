@@ -12,6 +12,9 @@
 #include <set>
 #include <cstdlib> 
 #include <ctime>
+#include <iomanip>
+#include <sstream>
+
 
 const int COST_LOW = 100;
 const int COST_MID = 500;
@@ -124,8 +127,15 @@ void runGame() {
     waveText.setPosition(20, 50);
     waveText.setString("Generaciones transcurridas: " + std::to_string(NumWaves));
 
+    sf::Text fitnessText;
+    fitnessText.setFont(font);
+    fitnessText.setCharacterSize(20);
+    fitnessText.setFillColor(sf::Color::White);
+    fitnessText.setPosition(20, 80);
+    fitnessText.setString("Fitness promedio por tipo:");
 
-    // Variable para saber qu� torre fue seleccionada
+
+    // Variable para saber que torre fue seleccionada
     enum TowerType { LOW, MID, HIGH };
     TowerType selectedTowerType = LOW;
 
@@ -154,7 +164,7 @@ void runGame() {
 
     // --- Loop principal ---
     while (gameWindow.isOpen()) {
-        float deltaTime = clock.restart().asSeconds(); // Declaraci�n �nica de deltaTime
+        float deltaTime = clock.restart().asSeconds(); 
 
         sf::Event event;
         while (gameWindow.pollEvent(event)) {
@@ -288,9 +298,28 @@ void runGame() {
         enemyManager.updateEnemies(deltaTime, credits);
         creditText.setString("Creditos: " + std::to_string(credits));
 
+        // Calcular y mostrar fitness promedio antes de limpiar enemigos
+        auto averages = enemyManager.getAverageFitnessPerType();
+
+        std::ostringstream oss;
+        oss << "Fitness promedio por tipo:\n";
+        for (const auto& pair : averages) {
+            oss << pair.first << ": " << std::fixed << std::setprecision(2) << pair.second << "\n";
+        }
+        fitnessText.setString(oss.str());
+
+
         if (enemyManager.isWaveReady(deltaTime)) {
+
+            std::cout << "[INFO] Preparando nueva oleada...\n";
+
+            std::cout << "[INFO] Ejecutando evolucion antes de la oleada " << NumWaves + 1 << "...\n";
+            enemyManager.evolve();  //llamado para hacer mutaciones
+
+
             int cantidad = enemyManager.getEnemiesPerWave();
             std::cout << "[INFO] Nueva oleada con " << cantidad << " enemigos\n";
+
             enemyManager.spawnInitialEnemies(cantidad);
             NumWaves += 1;
 
@@ -356,8 +385,9 @@ void runGame() {
 
                 sf::Vector2i targetPos(enemyCol, enemyRow);
 
-                // Aplica da�o al enemigo en esa posici�n
+                // Aplica dano al enemigo en esa posicion
                 enemyManager.applyDamageAt(targetPos, it->getDamageType(), it->getDamageAmount());
+                
 
 
                 if (grid[enemyRow][enemyCol] == 10) {
@@ -477,6 +507,7 @@ void runGame() {
         gameWindow.draw(textHigh);
         gameWindow.draw(creditText);
         gameWindow.draw(waveText);
+        gameWindow.draw(fitnessText);
         gameWindow.display();
     }
 

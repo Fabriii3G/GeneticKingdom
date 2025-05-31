@@ -49,7 +49,7 @@ void Enemy::receiveDamage(DamageType type, float amount) {
     health -= actualDamage;
 
     std::cout << getType() << " recibi� " << actualDamage
-        << " de da�o. Vida restante: " << health << "\n";
+        << " de dano. Vida restante: " << health << "\n";
 
     if (health <= 0.0f) {
         std::cout << getType() << " ha muerto.\n";

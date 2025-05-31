@@ -10,8 +10,10 @@
 class EnemyManager {
 private:
     std::vector<std::shared_ptr<Enemy>> enemies;
+    std::vector<std::shared_ptr<Enemy>> lastGeneration;
+
     int generation;
-    float mutationRate;
+    float mutationRate = 1.0f;
     int enemiesPerWave = 4;
     std::mt19937 rng;
 
@@ -41,10 +43,14 @@ public:
 
     void setPathsToAll(const std::vector<sf::Vector2i>& path); // A* lo genera
 
+    std::map<std::string, float> getAverageFitnessPerType() const;
+
+
 private:
     std::shared_ptr<Enemy> crossover(const Enemy& parent1, const Enemy& parent2);
     void mutate(std::shared_ptr<Enemy>& enemy);
     std::shared_ptr<Enemy> randomEnemy();
+
 };
 
 #endif

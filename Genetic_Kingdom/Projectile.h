@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "DamageType.h"
+#include <memory>
+
 
 class Projectile {
 public:
@@ -29,4 +31,5 @@ private:
 
     DamageType damageType;
     float damageAmount;
+
 };

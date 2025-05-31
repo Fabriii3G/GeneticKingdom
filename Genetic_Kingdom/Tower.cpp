@@ -1,6 +1,7 @@
 #include "Tower.h"
 #include "DamageType.h"
 #include <Iostream>
+#include "Enemy.h"
 const int TILE_SIZE = 32;
 const int ROWS = 25;
 const int COLS = 25;

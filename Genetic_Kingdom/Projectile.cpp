@@ -1,5 +1,7 @@
 #include "Projectile.h"
 #include <cmath>
+#include <SFML/Graphics.hpp>
+
 
 Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int targetRow, int targetCol,
     DamageType type, float damage)
@@ -11,11 +13,14 @@ Projectile::Projectile(sf::Vector2f startPos, sf::Vector2f targetPos, int target
     damageType(type),
     damageAmount(damage)
 {
+
+
     sf::Vector2f delta = target - position;
+
     float length = std::sqrt(delta.x * delta.x + delta.y * delta.y);
     direction = delta / length;
 
-    shape.setRadius(5);
+    shape.setRadius(3);
     shape.setFillColor(sf::Color::Red);
     shape.setOrigin(5, 5);
     shape.setPosition(position);
