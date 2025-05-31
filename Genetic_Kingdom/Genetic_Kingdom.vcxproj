@@ -108,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,13 +133,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DarkElfEnemy.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyEvolution.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="EvolutionManager.cpp" />
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HarpyEnemy.cpp" />
+    <ClCompile Include="HighTower.cpp" />
+    <ClCompile Include="LowTower.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MercenaryEnemy.cpp" />
+    <ClCompile Include="MidTower.cpp" />
+    <ClCompile Include="OgreEnemy.cpp" />
+    <ClCompile Include="Pathfinder.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Tower.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DamageType.h" />
+    <ClInclude Include="DarkElfEnemy.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyEvolution.h" />
+    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="EvolutionManager.h" />
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="HarpyEnemy.h" />
+    <ClInclude Include="HighTower.h" />
+    <ClInclude Include="LowTower.h" />
+    <ClInclude Include="MercenaryEnemy.h" />
+    <ClInclude Include="MidTower.h" />
+    <ClInclude Include="OgreEnemy.h" />
+    <ClInclude Include="Pathfinder.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Tower.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
